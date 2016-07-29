@@ -19,6 +19,7 @@
 		5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */; };
 		5B8F69821D4B53D6008C309B /* JYCityChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69811D4B53D6008C309B /* JYCityChoiceController.m */; };
 		5B8F69851D4B64E7008C309B /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F69841D4B64E7008C309B /* City.plist */; };
+		5B8F69871D4B6898008C309B /* citydata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F69861D4B6898008C309B /* citydata.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		5B8F69811D4B53D6008C309B /* JYCityChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCityChoiceController.m; sourceTree = "<group>"; };
 		5B8F69831D4B5ADE008C309B /* JYNotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNotes.h; sourceTree = "<group>"; };
 		5B8F69841D4B64E7008C309B /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
+		5B8F69861D4B6898008C309B /* citydata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydata.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 		5B8F69621D4B30E8008C309B /* Sources   资源 */ = {
 			isa = PBXGroup;
 			children = (
+				5B8F69861D4B6898008C309B /* citydata.plist */,
 				5B8F69841D4B64E7008C309B /* City.plist */,
 				5B8F69711D4B344C008C309B /* JYHeader.h */,
 				5B8F69721D4B347C008C309B /* JYDefine.h */,
@@ -425,6 +428,7 @@
 				5B8F693B1D4B2EFD008C309B /* LaunchScreen.storyboard in Resources */,
 				5B8F69851D4B64E7008C309B /* City.plist in Resources */,
 				5B8F69381D4B2EFD008C309B /* Assets.xcassets in Resources */,
+				5B8F69871D4B6898008C309B /* citydata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
