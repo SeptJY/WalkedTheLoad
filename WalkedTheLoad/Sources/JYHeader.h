@@ -13,5 +13,7 @@
 #import "UIImage+CKExtension.h"
 #import "UIView+Extension.h"
 #import "JYNSString+Extension.h"
+#import "MJExtension.h"
+#import "JYDataManager.h"
 
 #endif /* JYHeader_h */

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+static void *JYCureentCity = &JYCureentCity;
+
 @interface JYHomeController : UIViewController
 
 @end

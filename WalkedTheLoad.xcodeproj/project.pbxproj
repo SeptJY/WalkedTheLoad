@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43796BE042C0F9972053D2F5 /* libPods-WalkedTheLoad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 16A55C5D1CAA0ADE8927EB64 /* libPods-WalkedTheLoad.a */; };
+		5B24A27B1D4C506300950655 /* JYAllCity.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B24A27A1D4C506300950655 /* JYAllCity.m */; };
+		5B599AF71D4C7E22002327A7 /* citydict.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B599AF61D4C7E22002327A7 /* citydict.plist */; };
+		5B599AFA1D4C9337002327A7 /* JYHotCityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B599AF91D4C9337002327A7 /* JYHotCityCell.m */; };
+		5B599AFD1D4CAB13002327A7 /* JYDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B599AFC1D4CAB13002327A7 /* JYDataManager.m */; };
+		5B8856CD1D4C476D007C3BAF /* citydata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8856CC1D4C476D007C3BAF /* citydata.plist */; };
+		5B8856D01D4C4803007C3BAF /* JYLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8856CF1D4C4803007C3BAF /* JYLocation.m */; };
+		5B8856D31D4C48C7007C3BAF /* JYCityList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8856D21D4C48C7007C3BAF /* JYCityList.m */; };
+		5B8856D61D4C490D007C3BAF /* JYProvinceList.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8856D51D4C490D007C3BAF /* JYProvinceList.m */; };
+		5B8856D91D4C4997007C3BAF /* JYArealist.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8856D81D4C4997007C3BAF /* JYArealist.m */; };
+		5B8856DB1D4C4E62007C3BAF /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8856DA1D4C4E62007C3BAF /* city.plist */; };
 		5B8F692D1D4B2EFD008C309B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F692C1D4B2EFD008C309B /* main.m */; };
 		5B8F69301D4B2EFD008C309B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F692F1D4B2EFD008C309B /* AppDelegate.m */; };
 		5B8F69381D4B2EFD008C309B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F69371D4B2EFD008C309B /* Assets.xcassets */; };
@@ -18,8 +29,7 @@
 		5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697A1D4B4DCF008C309B /* UIImage+CKExtension.m */; };
 		5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */; };
 		5B8F69821D4B53D6008C309B /* JYCityChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69811D4B53D6008C309B /* JYCityChoiceController.m */; };
-		5B8F69851D4B64E7008C309B /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F69841D4B64E7008C309B /* City.plist */; };
-		5B8F69871D4B6898008C309B /* citydata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8F69861D4B6898008C309B /* citydata.plist */; };
+		6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +50,27 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15F1E2638791E1789C1100DE /* Pods-WalkedTheLoadTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkedTheLoadTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalkedTheLoadTests/Pods-WalkedTheLoadTests.release.xcconfig"; sourceTree = "<group>"; };
+		16A55C5D1CAA0ADE8927EB64 /* libPods-WalkedTheLoad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WalkedTheLoad.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		24A71CBFEB67C59C69D49ADB /* Pods-WalkedTheLoad.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkedTheLoad.release.xcconfig"; path = "Pods/Target Support Files/Pods-WalkedTheLoad/Pods-WalkedTheLoad.release.xcconfig"; sourceTree = "<group>"; };
+		4FD851DBF2DDD34C2861072C /* Pods-WalkedTheLoad.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkedTheLoad.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalkedTheLoad/Pods-WalkedTheLoad.debug.xcconfig"; sourceTree = "<group>"; };
+		5B24A2791D4C506300950655 /* JYAllCity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYAllCity.h; sourceTree = "<group>"; };
+		5B24A27A1D4C506300950655 /* JYAllCity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYAllCity.m; sourceTree = "<group>"; };
+		5B599AF61D4C7E22002327A7 /* citydict.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydict.plist; sourceTree = "<group>"; };
+		5B599AF81D4C9337002327A7 /* JYHotCityCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYHotCityCell.h; sourceTree = "<group>"; };
+		5B599AF91D4C9337002327A7 /* JYHotCityCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYHotCityCell.m; sourceTree = "<group>"; };
+		5B599AFB1D4CAB13002327A7 /* JYDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYDataManager.h; sourceTree = "<group>"; };
+		5B599AFC1D4CAB13002327A7 /* JYDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYDataManager.m; sourceTree = "<group>"; };
+		5B8856CC1D4C476D007C3BAF /* citydata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydata.plist; sourceTree = "<group>"; };
+		5B8856CE1D4C4803007C3BAF /* JYLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLocation.h; sourceTree = "<group>"; };
+		5B8856CF1D4C4803007C3BAF /* JYLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYLocation.m; sourceTree = "<group>"; };
+		5B8856D11D4C48C7007C3BAF /* JYCityList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCityList.h; sourceTree = "<group>"; };
+		5B8856D21D4C48C7007C3BAF /* JYCityList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCityList.m; sourceTree = "<group>"; };
+		5B8856D41D4C490D007C3BAF /* JYProvinceList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYProvinceList.h; sourceTree = "<group>"; };
+		5B8856D51D4C490D007C3BAF /* JYProvinceList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYProvinceList.m; sourceTree = "<group>"; };
+		5B8856D71D4C4997007C3BAF /* JYArealist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYArealist.h; sourceTree = "<group>"; };
+		5B8856D81D4C4997007C3BAF /* JYArealist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYArealist.m; sourceTree = "<group>"; };
+		5B8856DA1D4C4E62007C3BAF /* city.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = city.plist; sourceTree = "<group>"; };
 		5B8F69281D4B2EFD008C309B /* WalkedTheLoad.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkedTheLoad.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8F692C1D4B2EFD008C309B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B8F692E1D4B2EFD008C309B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = WalkedTheLoad/AppDelegate.h; sourceTree = SOURCE_ROOT; };
@@ -67,8 +98,8 @@
 		5B8F69801D4B53D6008C309B /* JYCityChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCityChoiceController.h; sourceTree = "<group>"; };
 		5B8F69811D4B53D6008C309B /* JYCityChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCityChoiceController.m; sourceTree = "<group>"; };
 		5B8F69831D4B5ADE008C309B /* JYNotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNotes.h; sourceTree = "<group>"; };
-		5B8F69841D4B64E7008C309B /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
-		5B8F69861D4B6898008C309B /* citydata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydata.plist; sourceTree = "<group>"; };
+		A978008D85E58484CDCCEC75 /* Pods-WalkedTheLoadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkedTheLoadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalkedTheLoadTests/Pods-WalkedTheLoadTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WalkedTheLoadTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43796BE042C0F9972053D2F5 /* libPods-WalkedTheLoad.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +129,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		400186E56CFD7A598D1D7DCC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				16A55C5D1CAA0ADE8927EB64 /* libPods-WalkedTheLoad.a */,
+				D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5B8F691F1D4B2EFD008C309B = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +145,8 @@
 				5B8F69441D4B2EFD008C309B /* WalkedTheLoadTests */,
 				5B8F694F1D4B2EFD008C309B /* WalkedTheLoadUITests */,
 				5B8F69291D4B2EFD008C309B /* Products */,
+				60AF815046032D36DEFE6B58 /* Pods */,
+				400186E56CFD7A598D1D7DCC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -190,8 +234,9 @@
 		5B8F69621D4B30E8008C309B /* Sources   资源 */ = {
 			isa = PBXGroup;
 			children = (
-				5B8F69861D4B6898008C309B /* citydata.plist */,
-				5B8F69841D4B64E7008C309B /* City.plist */,
+				5B599AF61D4C7E22002327A7 /* citydict.plist */,
+				5B8856DA1D4C4E62007C3BAF /* city.plist */,
+				5B8856CC1D4C476D007C3BAF /* citydata.plist */,
 				5B8F69711D4B344C008C309B /* JYHeader.h */,
 				5B8F69721D4B347C008C309B /* JYDefine.h */,
 			);
@@ -257,6 +302,14 @@
 		5B8F69691D4B3267008C309B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5B8856D41D4C490D007C3BAF /* JYProvinceList.h */,
+				5B8856D51D4C490D007C3BAF /* JYProvinceList.m */,
+				5B8856D11D4C48C7007C3BAF /* JYCityList.h */,
+				5B8856D21D4C48C7007C3BAF /* JYCityList.m */,
+				5B8856D71D4C4997007C3BAF /* JYArealist.h */,
+				5B8856D81D4C4997007C3BAF /* JYArealist.m */,
+				5B24A2791D4C506300950655 /* JYAllCity.h */,
+				5B24A27A1D4C506300950655 /* JYAllCity.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,6 +317,8 @@
 		5B8F696A1D4B3267008C309B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B599AF81D4C9337002327A7 /* JYHotCityCell.h */,
+				5B599AF91D4C9337002327A7 /* JYHotCityCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +351,8 @@
 		5B8F69741D4B4DBF008C309B /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				5B8856CE1D4C4803007C3BAF /* JYLocation.h */,
+				5B8856CF1D4C4803007C3BAF /* JYLocation.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -316,8 +373,21 @@
 		5B8F69761D4B4DBF008C309B /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				5B599AFB1D4CAB13002327A7 /* JYDataManager.h */,
+				5B599AFC1D4CAB13002327A7 /* JYDataManager.m */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		60AF815046032D36DEFE6B58 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4FD851DBF2DDD34C2861072C /* Pods-WalkedTheLoad.debug.xcconfig */,
+				24A71CBFEB67C59C69D49ADB /* Pods-WalkedTheLoad.release.xcconfig */,
+				A978008D85E58484CDCCEC75 /* Pods-WalkedTheLoadTests.debug.xcconfig */,
+				15F1E2638791E1789C1100DE /* Pods-WalkedTheLoadTests.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,9 +397,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B8F69551D4B2EFD008C309B /* Build configuration list for PBXNativeTarget "WalkedTheLoad" */;
 			buildPhases = (
+				9CA31F82AFC401FBBD2C8579 /* [CP] Check Pods Manifest.lock */,
 				5B8F69241D4B2EFD008C309B /* Sources */,
 				5B8F69251D4B2EFD008C309B /* Frameworks */,
 				5B8F69261D4B2EFD008C309B /* Resources */,
+				73759D15C765C2439223016B /* [CP] Embed Pods Frameworks */,
+				192DC8EACF43858F68B85537 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -344,9 +417,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B8F69581D4B2EFD008C309B /* Build configuration list for PBXNativeTarget "WalkedTheLoadTests" */;
 			buildPhases = (
+				1EB9C9347EFA637574E45F0B /* [CP] Check Pods Manifest.lock */,
 				5B8F693D1D4B2EFD008C309B /* Sources */,
 				5B8F693E1D4B2EFD008C309B /* Frameworks */,
 				5B8F693F1D4B2EFD008C309B /* Resources */,
+				DFDD02741E4BD6A783AF8DA6 /* [CP] Embed Pods Frameworks */,
+				7541782653735E33049A2C84 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -425,10 +501,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B599AF71D4C7E22002327A7 /* citydict.plist in Resources */,
 				5B8F693B1D4B2EFD008C309B /* LaunchScreen.storyboard in Resources */,
-				5B8F69851D4B64E7008C309B /* City.plist in Resources */,
+				5B8856DB1D4C4E62007C3BAF /* city.plist in Resources */,
 				5B8F69381D4B2EFD008C309B /* Assets.xcassets in Resources */,
-				5B8F69871D4B6898008C309B /* citydata.plist in Resources */,
+				5B8856CD1D4C476D007C3BAF /* citydata.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,18 +525,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		192DC8EACF43858F68B85537 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalkedTheLoad/Pods-WalkedTheLoad-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1EB9C9347EFA637574E45F0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		73759D15C765C2439223016B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalkedTheLoad/Pods-WalkedTheLoad-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7541782653735E33049A2C84 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalkedTheLoadTests/Pods-WalkedTheLoadTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CA31F82AFC401FBBD2C8579 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DFDD02741E4BD6A783AF8DA6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WalkedTheLoadTests/Pods-WalkedTheLoadTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B8F69241D4B2EFD008C309B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B599AFD1D4CAB13002327A7 /* JYDataManager.m in Sources */,
 				5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */,
+				5B8856D01D4C4803007C3BAF /* JYLocation.m in Sources */,
 				5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */,
+				5B24A27B1D4C506300950655 /* JYAllCity.m in Sources */,
 				5B8F69821D4B53D6008C309B /* JYCityChoiceController.m in Sources */,
 				5B8F697D1D4B4DCF008C309B /* JYNSString+Extension.m in Sources */,
 				5B8F69301D4B2EFD008C309B /* AppDelegate.m in Sources */,
+				5B8856D61D4C490D007C3BAF /* JYProvinceList.m in Sources */,
 				5B8F692D1D4B2EFD008C309B /* main.m in Sources */,
 				5B8F696F1D4B333F008C309B /* JYHomeController.m in Sources */,
+				5B8856D31D4C48C7007C3BAF /* JYCityList.m in Sources */,
+				5B8856D91D4C4997007C3BAF /* JYArealist.m in Sources */,
+				5B599AFA1D4C9337002327A7 /* JYHotCityCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +769,7 @@
 		};
 		5B8F69561D4B2EFD008C309B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4FD851DBF2DDD34C2861072C /* Pods-WalkedTheLoad.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -604,11 +782,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.2wei.WalkedTheLoad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
 		5B8F69571D4B2EFD008C309B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24A71CBFEB67C59C69D49ADB /* Pods-WalkedTheLoad.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -621,11 +801,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.2wei.WalkedTheLoad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
 		5B8F69591D4B2EFD008C309B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A978008D85E58484CDCCEC75 /* Pods-WalkedTheLoadTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WalkedTheLoadTests/Info.plist;
@@ -638,6 +820,7 @@
 		};
 		5B8F695A1D4B2EFD008C309B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15F1E2638791E1789C1100DE /* Pods-WalkedTheLoadTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = WalkedTheLoadTests/Info.plist;
@@ -689,6 +872,7 @@
 				5B8F69571D4B2EFD008C309B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B8F69581D4B2EFD008C309B /* Build configuration list for PBXNativeTarget "WalkedTheLoadTests" */ = {
 			isa = XCConfigurationList;
@@ -697,6 +881,7 @@
 				5B8F695A1D4B2EFD008C309B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5B8F695B1D4B2EFD008C309B /* Build configuration list for PBXNativeTarget "WalkedTheLoadUITests" */ = {
 			isa = XCConfigurationList;
@@ -705,6 +890,7 @@
 				5B8F695D1D4B2EFD008C309B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

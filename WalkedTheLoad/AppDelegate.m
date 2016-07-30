@@ -11,12 +11,13 @@
 
 #import "JYHomeController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <CLLocationManagerDelegate>
 {
     //定位
-    CLLocationManager *_locationManager;//用于获取位置
     CLLocation *_checkLocation;//用于保存位置信息
 }
+
+@property (strong, nonatomic) CLLocationManager *locationManager;
 
 @end
 
@@ -33,7 +34,79 @@
     
     [self.window makeKeyAndVisible];
     
+    [self findCurrentLocation];
+    
     return YES;
+}
+
+- (CLLocationManager *)locationManager
+{
+    if (!_locationManager) {
+        
+        _locationManager = [[CLLocationManager alloc] init];
+        
+        _locationManager.delegate=self;
+        _locationManager.desiredAccuracy=kCLLocationAccuracyBest;
+        _locationManager.distanceFilter=10;
+        
+    }
+    return _locationManager;
+}
+
+
+- (void)findCurrentLocation {
+    
+    // 1
+    if (! [CLLocationManager locationServicesEnabled]) {
+        NSLog(@"未开启定位服务, 请开启定位服务定位您所在城市.");
+    }
+    // 2
+    else if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        
+        [_locationManager requestWhenInUseAuthorization];
+        [_locationManager startUpdatingLocation];
+    }
+    // 3
+    else {
+        
+        [_locationManager requestAlwaysAuthorization];
+        [_locationManager startUpdatingLocation];
+    }
+}
+
+- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+//    if (self.isFirstUpdate) {
+//        // 4
+//        self.isFirstUpdate = NO;
+//        return;
+//    }
+    
+    // 5
+    _checkLocation = [locations lastObject];
+    
+    CLGeocoder *geocoder = [[CLGeocoder alloc] init];
+    // 反向地理编译出地址信息
+    [geocoder reverseGeocodeLocation:_checkLocation completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (! error) {
+            if ([placemarks count] > 0) {
+                CLPlacemark *placemark = [placemarks firstObject];
+                
+                // 获取城市
+                NSString *city = placemark.locality;
+                if (! city) {
+                    // 6
+                    city = placemark.administrativeArea;
+                }
+                [JYDataManager sharedManager].currentCity = city;
+                NSLog(@"%@", [JYDataManager sharedManager].currentCity);
+            } else if ([placemarks count] == 0) {
+                NSLog(@"定位城市失败");
+            }
+        } else {
+            NSLog(@"请检查您的网络");
+        }
+    }];
+    [_locationManager stopUpdatingLocation];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
