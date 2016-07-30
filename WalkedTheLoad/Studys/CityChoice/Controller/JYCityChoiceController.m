@@ -8,7 +8,15 @@
 
 #import "JYCityChoiceController.h"
 
-@interface JYCityChoiceController ()
+@interface JYCityChoiceController () <UITableViewDelegate, UITableViewDataSource>
+
+@property (strong, nonatomic) UIView *searchBgView;
+
+@property (strong, nonatomic) UISearchBar *searchBar;
+
+@property (strong, nonatomic) UITableView *tableView;
+
+@property (strong, nonatomic) NSMutableArray *cityArray;
 
 @end
 
@@ -34,6 +42,21 @@
     return UIStatusBarStyleLightContent;
 }
 
+- (NSMutableArray *)cityArray
+{
+    if (!_cityArray) {
+        
+        _cityArray = [NSMutableArray array];
+        
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"citydata" ofType:@"plist"];
+        
+        NSArray *mCityArray = [[NSArray alloc] initWithContentsOfFile:path];
+        
+        
+    }
+    return _cityArray;
+}
+
 #pragma mark ---> 自定义导航栏
 - (void)customNavigation
 {
@@ -57,6 +80,73 @@
 - (void)cityBackBtnOnClick
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (UITableView *)tableView
+{
+    if (!_tableView) {
+        
+        _tableView = [[UITableView alloc] init];
+        
+        _tableView.delegate = self;
+        _tableView.dataSource = self;
+        _tableView.showsVerticalScrollIndicator = NO;
+        
+        [self.view addSubview:_tableView];
+    }
+    return _tableView;
+}
+
+/** 搜索框底部背景view */
+- (UIView *)searchBgView
+{
+    if (!_searchBgView) {
+        
+        _searchBgView = [[UIView alloc] init];
+        
+        _searchBgView.backgroundColor = [UIColor cyanColor];
+        
+        [self.view addSubview:_searchBgView];
+    }
+    return _searchBgView;
+}
+
+/** 搜索框 */
+- (UISearchBar *)searchBar
+{
+    if (!_searchBar) {
+        
+        _searchBar = [[UISearchBar alloc] init];
+        
+        _searchBar.backgroundColor = [UIColor yellowColor];
+        
+        [self.searchBgView addSubview:_searchBar];
+    }
+    return _searchBar;
+}
+
+#pragma mark ---> UITableViewDelegate, UITableViewDataSource
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    }
+    return cell;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    self.searchBgView.frame = CGRectMake(0, 64, screenW, 44);
+    
+    self.searchBar.frame = CGRectMake(0, 0, screenW, 44);
+    
+    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBgView.frame), screenW, screenH - CGRectGetMaxY(self.searchBgView.frame));
 }
 
 @end

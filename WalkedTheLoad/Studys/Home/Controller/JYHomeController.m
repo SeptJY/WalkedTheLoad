@@ -19,10 +19,6 @@
 {
     [super viewDidLoad];
     
-//    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-//    self.navigationController.navigationBarHidden = YES;
-    
-    
     // 初始化导航栏
     [self setupNavigation];
     

@@ -7,10 +7,16 @@
 //
 
 #import "AppDelegate.h"
+#import <CoreLocation/CoreLocation.h>
 
 #import "JYHomeController.h"
 
 @interface AppDelegate ()
+{
+    //定位
+    CLLocationManager *_locationManager;//用于获取位置
+    CLLocation *_checkLocation;//用于保存位置信息
+}
 
 @end
 
