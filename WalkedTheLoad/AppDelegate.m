@@ -61,16 +61,16 @@
         NSLog(@"未开启定位服务, 请开启定位服务定位您所在城市.");
     }
     // 2
-    else if ([_locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+    else if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         
-        [_locationManager requestWhenInUseAuthorization];
-        [_locationManager startUpdatingLocation];
+        [self.locationManager requestWhenInUseAuthorization];
+        [self.locationManager startUpdatingLocation];
     }
     // 3
     else {
         
-        [_locationManager requestAlwaysAuthorization];
-        [_locationManager startUpdatingLocation];
+        [self.locationManager requestAlwaysAuthorization];
+        [self.locationManager startUpdatingLocation];
     }
 }
 
@@ -97,8 +97,8 @@
                     // 6
                     city = placemark.administrativeArea;
                 }
-                [JYDataManager sharedManager].currentCity = city;
-                NSLog(@"%@", [JYDataManager sharedManager].currentCity);
+                [JYDataManager sharedManager].currentCity = [AppDelegate delectedSubStringOfStr:city];
+                
             } else if ([placemarks count] == 0) {
                 NSLog(@"定位城市失败");
             }
@@ -107,6 +107,16 @@
         }
     }];
     [_locationManager stopUpdatingLocation];
+}
+
++ (NSString *)delectedSubStringOfStr:(NSString *)str
+{
+    NSRange range = [str rangeOfString:@"市"];
+    if (range.length) {
+        return [str substringWithRange:NSMakeRange(0, range.location)];
+    } else {
+       return str;
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
