@@ -11,6 +11,12 @@
 const static NSInteger margin = 10;
 const static NSInteger space = 15;
 
+@interface JYHotCityCell ()
+
+@property (nonatomic, strong) NSArray *hotCitys;
+
+@end
+
 @implementation JYHotCityCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView ddentifier:(NSString *)ID hotCity:(NSArray *)hotCity
@@ -28,6 +34,8 @@ const static NSInteger space = 15;
 {
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
+        
+        self.hotCitys = hotCity;
         
         CGFloat btnW = (screenW - 2 * space - 2 * margin) / 3;
         CGFloat btnH = 40;
@@ -59,6 +67,14 @@ const static NSInteger space = 15;
             
             [self.contentView addSubview:btn];
         }
+        
+        CGFloat selfHight = (self.hotCitys.count / 3 == 0) ? (self.hotCitys.count / 3 * 40 + 10 * (self.hotCitys.count / 3 + 1)) : ((self.hotCitys.count / 3 + 1) * 40 + 10 * (self.hotCitys.count / 3 + 2));
+        
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, selfHight - 1, self.width, 1)];
+        
+        lineView.backgroundColor = setColor(71, 71, 71);
+        
+        [self.contentView addSubview:lineView];
     }
     return self;
 }

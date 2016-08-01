@@ -13,7 +13,7 @@
 
 static NSString *hotCity = @"hotCity";
 
-@interface JYCityChoiceController () <UITableViewDelegate, UITableViewDataSource>
+@interface JYCityChoiceController () <UITableViewDelegate, UITableViewDataSource,  UISearchBarDelegate>
 
 @property (strong, nonatomic) UIView *searchBgView;
 
@@ -43,6 +43,10 @@ static NSString *hotCity = @"hotCity";
     [self getCityArray];
     
     self.hotCityArray = @[@"北京", @"上海", @"深圳", @"赣州", @"于都", @"广州", @"厦门", @"三亚"];
+    
+    // 修改UISearchBar 取消按钮的颜色和title
+    [[UIBarButtonItem appearanceWhenContainedIn: [UISearchBar class], nil] setTitle:@"取消"];
+    [[UIBarButtonItem appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:setColor(124, 124, 124)];
 }
 
 - (NSMutableArray *)letterArray
@@ -74,6 +78,8 @@ static NSString *hotCity = @"hotCity";
     // 添加‘热门城市’、‘定位城市’到letterArray数组中
     [self.letterArray insertObject:@"热门城市" atIndex:0];
     [self.letterArray insertObject:@"定位城市" atIndex:0];
+//    [self.letterArray insertObject:UITableViewIndexSearch atIndex:0];
+//    NSLog(@"%@, %lu", self.letterArray, (unsigned long)self.letterArray.count);
 }
 
 //获取某个字符串或者汉字的首字母.
@@ -149,12 +155,47 @@ static NSString *hotCity = @"hotCity";
     if (!_searchBar) {
         
         _searchBar = [[UISearchBar alloc] init];
+        _searchBar.backgroundImage = [UIImage imageWithColor:[UIColor whiteColor]];
+//        _searchBar.scopeBarBackgroundImage = [UIImage imageWithColor:[UIColor redColor]];
+        [_searchBar setSearchFieldBackgroundImage:[UIImage imageNamed:@"city_search_icon"] forState:UIControlStateNormal];
+        _searchBar.placeholder = @"输入城市名或拼音查询";
+        _searchBar.delegate = self;
         
-        _searchBar.backgroundColor = [UIColor yellowColor];
         
         [self.searchBgView addSubview:_searchBar];
     }
     return _searchBar;
+}
+
+#pragma mark - UISearchBar得到焦点并开始编辑时，执行该方法  UISearchBarDelegate
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
+{
+    [searchBar setShowsCancelButton:YES animated:YES];
+    
+    if(searchBar.text.length==0||[searchBar.text isEqualToString:@""]||[searchBar.text isKindOfClass:[NSNull class]])
+    {
+        
+    }
+    else
+    {
+//        NSLog(@"%@", searchBar.text);
+    }
+    
+    // return YES;
+}
+
+// 取消按钮被按下时，执行的方法
+- (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
+{
+    searchBar.text = nil;
+    [searchBar setShowsCancelButton:NO animated:YES];
+    [searchBar resignFirstResponder];
+}
+
+// 当搜索内容变化时，执行该方法。很有用，可以实现时实搜索
+- (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
+{
+    NSLog(@"%@", searchBar.text);
 }
 
 #pragma mark ---> UITableViewDelegate, UITableViewDataSource
@@ -165,9 +206,10 @@ static NSString *hotCity = @"hotCity";
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+//    NSLog(@"%ld", (long)section);
     switch (section) {
         case 0:
-            return 0;
+            return 1;
             break;
         case 1:
             return 1;
@@ -186,7 +228,15 @@ static NSString *hotCity = @"hotCity";
 {
     switch (indexPath.section) {
         case 0:
-            return 0;
+        {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+            if (cell == nil) {
+                cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+            }
+            cell.textLabel.text = @"SB";
+            
+            return cell;
+        }
             break;
         case 1:
         {
@@ -231,6 +281,11 @@ static NSString *hotCity = @"hotCity";
             return 44;
             break;
     }
+}
+
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
+{
+    return self.letterArray;
 }
 
 - (void)viewDidLayoutSubviews
