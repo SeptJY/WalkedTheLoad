@@ -37,7 +37,7 @@ const static NSInteger space = 15;
         
         self.hotCitys = hotCity;
         
-        CGFloat btnW = (screenW - 2 * space - 2 * margin) / 3;
+        CGFloat btnW = (screenW - 3 * space - 2 * margin) / 3;
         CGFloat btnH = 40;
         int totalColumns = 3;
         
@@ -70,9 +70,10 @@ const static NSInteger space = 15;
         
         CGFloat selfHight = (self.hotCitys.count / 3 == 0) ? (self.hotCitys.count / 3 * 40 + 10 * (self.hotCitys.count / 3 + 1)) : ((self.hotCitys.count / 3 + 1) * 40 + 10 * (self.hotCitys.count / 3 + 2));
         
-        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, selfHight - 1, self.width, 1)];
+        UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, selfHight - 0.5, screenW, 0.5)];
+        NSLog(@"%@", NSStringFromCGRect(lineView.frame));
         
-        lineView.backgroundColor = setColor(71, 71, 71);
+        lineView.backgroundColor = setColor(214, 214, 214);
         
         [self.contentView addSubview:lineView];
     }

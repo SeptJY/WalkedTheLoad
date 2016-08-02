@@ -8,6 +8,7 @@
 
 #import "JYHomeController.h"
 #import "JYCityChoiceController.h"
+#import "JYCityChoicesController.h"
 
 @interface JYHomeController ()
 
@@ -82,7 +83,7 @@
 {
 //    JYCityChoiceController *city = [[JYCityChoiceController alloc] init];
     
-    UINavigationController *navCrl = [[UINavigationController alloc] initWithRootViewController:[[JYCityChoiceController alloc] init]];
+    UINavigationController *navCrl = [[UINavigationController alloc] initWithRootViewController:[[JYCityChoicesController alloc] init]];
     
     [self presentViewController:navCrl animated:YES completion:nil];
 }

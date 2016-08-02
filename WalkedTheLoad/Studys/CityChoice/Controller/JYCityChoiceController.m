@@ -127,8 +127,8 @@ static NSString *hotCity = @"hotCity";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
-        
-//        [_tableView registerClass:[JYHotCityCell class] forCellReuseIdentifier:hotCity];
+        _tableView.tableHeaderView = self.searchBgView;
+        _tableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
         
         [self.view addSubview:_tableView];
     }
@@ -144,7 +144,6 @@ static NSString *hotCity = @"hotCity";
         
         _searchBgView.backgroundColor = [UIColor cyanColor];
         
-        [self.view addSubview:_searchBgView];
     }
     return _searchBgView;
 }
@@ -156,11 +155,11 @@ static NSString *hotCity = @"hotCity";
         
         _searchBar = [[UISearchBar alloc] init];
         _searchBar.backgroundImage = [UIImage imageWithColor:[UIColor whiteColor]];
-//        _searchBar.scopeBarBackgroundImage = [UIImage imageWithColor:[UIColor redColor]];
         [_searchBar setSearchFieldBackgroundImage:[UIImage imageNamed:@"city_search_icon"] forState:UIControlStateNormal];
         _searchBar.placeholder = @"输入城市名或拼音查询";
         _searchBar.delegate = self;
-        
+        // 设置提示文字与搜索图标的间距
+        _searchBar.searchTextPositionAdjustment = UIOffsetMake(10, 0);
         
         [self.searchBgView addSubview:_searchBar];
     }
@@ -170,7 +169,17 @@ static NSString *hotCity = @"hotCity";
 #pragma mark - UISearchBar得到焦点并开始编辑时，执行该方法  UISearchBarDelegate
 - (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar
 {
+    // 显示UISearchBar取消按钮
     [searchBar setShowsCancelButton:YES animated:YES];
+    
+    // 设置取消按的属性
+    for (UIView *view in [[searchBar.subviews firstObject] subviews]) {
+        if ([view isKindOfClass:[NSClassFromString(@"UINavigationButton") class]]) {
+            UIButton *cancleBtn = (UIButton *)view;
+            
+            cancleBtn.titleLabel.font = setFont(14);
+        }
+    }
     
     if(searchBar.text.length==0||[searchBar.text isEqualToString:@""]||[searchBar.text isKindOfClass:[NSNull class]])
     {
@@ -290,11 +299,13 @@ static NSString *hotCity = @"hotCity";
 
 - (void)viewDidLayoutSubviews
 {
+    self.tableView.frame = CGRectMake(0, 0, screenW, screenH);
+    
     self.searchBgView.frame = CGRectMake(0, 64, screenW, 44);
     
     self.searchBar.frame = CGRectMake(0, 0, screenW, 44);
+
     
-    self.tableView.frame = CGRectMake(0, CGRectGetMaxY(self.searchBgView.frame), screenW, screenH - CGRectGetMaxY(self.searchBgView.frame));
 }
 
 @end
