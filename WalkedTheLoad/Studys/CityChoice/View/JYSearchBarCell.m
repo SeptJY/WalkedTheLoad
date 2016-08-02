@@ -87,11 +87,9 @@
     
     if(searchBar.text.length==0||[searchBar.text isEqualToString:@""]||[searchBar.text isKindOfClass:[NSNull class]])
     {
-        
-    }
-    else
-    {
-        //        NSLog(@"%@", searchBar.text);
+        if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarTextDidBeginEditing)]) {
+            [self.delegate searchBarTextDidBeginEditing];
+        }
     }
 }
 
@@ -101,17 +99,23 @@
     searchBar.text = nil;
     [searchBar setShowsCancelButton:NO animated:YES];
     [searchBar resignFirstResponder];
+    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarCancelButtonClicked)]) {
+        [self.delegate searchBarCancelButtonClicked];
+    }
 }
 
 // 当搜索内容变化时，执行该方法。很有用，可以实现时实搜索
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText
 {
-    NSLog(@"%@", searchBar.text);
+    if (self.delegate && [self.delegate respondsToSelector:@selector(searchBarText:textDidChange:)]) {
+        [self.delegate searchBarText:searchBar.text textDidChange:searchText];
+    }
 }
 
 - (void)layoutSubviews
 {
-    self.searchBar.frame = CGRectMake(0, 0, self.width - 20, self.height);
+    self.searchBar.frame = CGRectMake(0, 0, self.width - 10, self.height);
     
     self.lineView.frame = CGRectMake(0, self.height - 0.5, screenW, 0.5);
 }

@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JYHotCityCellDelegate <NSObject>
+
+@optional
+- (void)hotCityBtnTitle:(NSString *)cityName;
+
+@end
+
 @interface JYHotCityCell : UITableViewCell
 
 + (instancetype)cellWithTableView:(UITableView *)tableView ddentifier:(NSString *)ID hotCity:(NSArray *)hotCity;
+
+@property (weak, nonatomic) id <JYHotCityCellDelegate>delegate;
 
 @end

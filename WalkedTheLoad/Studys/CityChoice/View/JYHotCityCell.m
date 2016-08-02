@@ -38,7 +38,7 @@ const static NSInteger space = 15;
         self.hotCitys = hotCity;
         
         CGFloat btnW = (screenW - 3 * space - 2 * margin) / 3;
-        CGFloat btnH = 40;
+        CGFloat btnH = 35;
         int totalColumns = 3;
         
         for (int i = 0; i < hotCity.count; i ++) {
@@ -48,7 +48,7 @@ const static NSInteger space = 15;
             
             // 计算x和y
             CGFloat btnX = space + col * (btnW + margin);
-            CGFloat btnY = 8 + row * (btnH + margin);
+            CGFloat btnY = 5 + row * (btnH + margin);
             
             UIButton *btn = [[UIButton alloc] init];
             
@@ -68,10 +68,9 @@ const static NSInteger space = 15;
             [self.contentView addSubview:btn];
         }
         
-        CGFloat selfHight = (self.hotCitys.count / 3 == 0) ? (self.hotCitys.count / 3 * 40 + 10 * (self.hotCitys.count / 3 + 1)) : ((self.hotCitys.count / 3 + 1) * 40 + 10 * (self.hotCitys.count / 3 + 2));
+        CGFloat selfHight = (self.hotCitys.count / 3 == 0) ? (self.hotCitys.count / 3 * btnH + 10 * (self.hotCitys.count / 3 + 1)) : ((self.hotCitys.count / 3 + 1) * btnH + 10 * (self.hotCitys.count / 3 + 2));
         
         UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, selfHight - 0.5, screenW, 0.5)];
-        NSLog(@"%@", NSStringFromCGRect(lineView.frame));
         
         lineView.backgroundColor = setColor(214, 214, 214);
         
@@ -82,7 +81,9 @@ const static NSInteger space = 15;
 
 - (void)hotCityBtnOnClick:(UIButton *)btn
 {
-    
+    if (self.delegate && [self.delegate respondsToSelector:@selector(hotCityBtnTitle:)]) {
+        [self.delegate hotCityBtnTitle:btn.currentTitle];
+    }
 }
 
 @end
