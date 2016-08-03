@@ -35,6 +35,11 @@
 		5BA80A921D51EDA4002D0999 /* JYEjectMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA80A911D51EDA4002D0999 /* JYEjectMenu.m */; };
 		6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */; };
 		843D106B1D50DFB200B547AF /* JYCityChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 843D106A1D50DFB200B547AF /* JYCityChoiceController.m */; };
+		846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A760D1D5237990017A4AC /* JYTabBarController.m */; };
+		846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A761D1D5238F40017A4AC /* JYLifeController.m */; };
+		846A76211D5239060017A4AC /* JYMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A76201D5239060017A4AC /* JYMineController.m */; };
+		846A76241D5239190017A4AC /* JYStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A76231D5239190017A4AC /* JYStudyController.m */; };
+		846A762D1D5239410017A4AC /* JYNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A762C1D5239410017A4AC /* JYNewsController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +118,16 @@
 		5BA80A911D51EDA4002D0999 /* JYEjectMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYEjectMenu.m; sourceTree = "<group>"; };
 		843D10691D50DFB200B547AF /* JYCityChoiceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYCityChoiceController.h; sourceTree = "<group>"; };
 		843D106A1D50DFB200B547AF /* JYCityChoiceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYCityChoiceController.m; sourceTree = "<group>"; };
+		846A760C1D5237990017A4AC /* JYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTabBarController.h; sourceTree = "<group>"; };
+		846A760D1D5237990017A4AC /* JYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTabBarController.m; sourceTree = "<group>"; };
+		846A761C1D5238F40017A4AC /* JYLifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLifeController.h; sourceTree = "<group>"; };
+		846A761D1D5238F40017A4AC /* JYLifeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYLifeController.m; sourceTree = "<group>"; };
+		846A761F1D5239060017A4AC /* JYMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineController.h; sourceTree = "<group>"; };
+		846A76201D5239060017A4AC /* JYMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineController.m; sourceTree = "<group>"; };
+		846A76221D5239190017A4AC /* JYStudyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYStudyController.h; sourceTree = "<group>"; };
+		846A76231D5239190017A4AC /* JYStudyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYStudyController.m; sourceTree = "<group>"; };
+		846A762B1D5239410017A4AC /* JYNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNewsController.h; sourceTree = "<group>"; };
+		846A762C1D5239410017A4AC /* JYNewsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYNewsController.m; sourceTree = "<group>"; };
 		A978008D85E58484CDCCEC75 /* Pods-WalkedTheLoadTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WalkedTheLoadTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WalkedTheLoadTests/Pods-WalkedTheLoadTests.debug.xcconfig"; sourceTree = "<group>"; };
 		D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WalkedTheLoadTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -230,8 +245,12 @@
 		5B8F69601D4B2F4F008C309B /* Studys  知识点 */ = {
 			isa = PBXGroup;
 			children = (
-				5B8F69631D4B3209008C309B /* Home */,
-				5B8F69671D4B3267008C309B /* CityChoice    城市选择 */,
+				846A760B1D5237600017A4AC /* TabBar    底部tabBar  */,
+				5B8F69631D4B3209008C309B /* Home    首页 */,
+				846A760F1D5238560017A4AC /* Life    生活 */,
+				846A76131D5238560017A4AC /* Mine   我的 */,
+				846A76171D5238560017A4AC /* News    每天新鲜事 */,
+				846A76181D5238560017A4AC /* Study   学习 */,
 			);
 			name = "Studys  知识点";
 			path = Studys;
@@ -259,14 +278,16 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		5B8F69631D4B3209008C309B /* Home */ = {
+		5B8F69631D4B3209008C309B /* Home    首页 */ = {
 			isa = PBXGroup;
 			children = (
 				5B8F69641D4B3209008C309B /* Controller */,
 				5B8F69651D4B3209008C309B /* Model */,
 				5B8F69661D4B3209008C309B /* View */,
 				5B8F696C1D4B3301008C309B /* Describe */,
+				5B8F69671D4B3267008C309B /* CityChoice    城市选择 */,
 			);
+			name = "Home    首页";
 			path = Home;
 			sourceTree = "<group>";
 		};
@@ -304,7 +325,7 @@
 				5B8F696B1D4B32D4008C309B /* Describe */,
 			);
 			name = "CityChoice    城市选择";
-			path = CityChoice;
+			path = ../CityChoice;
 			sourceTree = "<group>";
 		};
 		5B8F69681D4B3267008C309B /* Controller */ = {
@@ -415,6 +436,152 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		846A760B1D5237600017A4AC /* TabBar    底部tabBar  */ = {
+			isa = PBXGroup;
+			children = (
+				846A760C1D5237990017A4AC /* JYTabBarController.h */,
+				846A760D1D5237990017A4AC /* JYTabBarController.m */,
+			);
+			name = "TabBar    底部tabBar ";
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		846A760F1D5238560017A4AC /* Life    生活 */ = {
+			isa = PBXGroup;
+			children = (
+				846A76101D5238560017A4AC /* Controller */,
+				846A76111D5238560017A4AC /* Model */,
+				846A76121D5238560017A4AC /* View */,
+			);
+			name = "Life    生活";
+			path = Life;
+			sourceTree = "<group>";
+		};
+		846A76101D5238560017A4AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846A761C1D5238F40017A4AC /* JYLifeController.h */,
+				846A761D1D5238F40017A4AC /* JYLifeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846A76111D5238560017A4AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		846A76121D5238560017A4AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846A76131D5238560017A4AC /* Mine   我的 */ = {
+			isa = PBXGroup;
+			children = (
+				846A76141D5238560017A4AC /* Controller */,
+				846A76151D5238560017A4AC /* Model */,
+				846A76161D5238560017A4AC /* View */,
+			);
+			name = "Mine   我的";
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		846A76141D5238560017A4AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846A761F1D5239060017A4AC /* JYMineController.h */,
+				846A76201D5239060017A4AC /* JYMineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846A76151D5238560017A4AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		846A76161D5238560017A4AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846A76171D5238560017A4AC /* News    每天新鲜事 */ = {
+			isa = PBXGroup;
+			children = (
+				846A76251D52392F0017A4AC /* Controller */,
+				846A76281D52392F0017A4AC /* Model */,
+				846A76291D52392F0017A4AC /* View */,
+			);
+			name = "News    每天新鲜事";
+			path = News;
+			sourceTree = "<group>";
+		};
+		846A76181D5238560017A4AC /* Study   学习 */ = {
+			isa = PBXGroup;
+			children = (
+				846A76191D5238560017A4AC /* Controller */,
+				846A761A1D5238560017A4AC /* Model */,
+				846A761B1D5238560017A4AC /* View */,
+			);
+			name = "Study   学习";
+			path = Study;
+			sourceTree = "<group>";
+		};
+		846A76191D5238560017A4AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846A76221D5239190017A4AC /* JYStudyController.h */,
+				846A76231D5239190017A4AC /* JYStudyController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846A761A1D5238560017A4AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		846A761B1D5238560017A4AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		846A76251D52392F0017A4AC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				846A762B1D5239410017A4AC /* JYNewsController.h */,
+				846A762C1D5239410017A4AC /* JYNewsController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		846A76281D52392F0017A4AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		846A76291D52392F0017A4AC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -489,7 +656,7 @@
 				TargetAttributes = {
 					5B8F69271D4B2EFD008C309B = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 8JD24CDC43;
+						DevelopmentTeam = 6P9MQLZBKJ;
 					};
 					5B8F69401D4B2EFD008C309B = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -655,17 +822,22 @@
 				5BA80A8F1D51CD80002D0999 /* JYCityShowCell.m in Sources */,
 				5B24A27B1D4C506300950655 /* JYAllCity.m in Sources */,
 				5B8F697D1D4B4DCF008C309B /* JYNSString+Extension.m in Sources */,
+				846A76211D5239060017A4AC /* JYMineController.m in Sources */,
 				5B8F69301D4B2EFD008C309B /* AppDelegate.m in Sources */,
 				5B8856D61D4C490D007C3BAF /* JYProvinceList.m in Sources */,
+				846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */,
 				5B2E2E5C1D50821F0036DBC7 /* JYSearchBarCell.m in Sources */,
 				5B8F692D1D4B2EFD008C309B /* main.m in Sources */,
 				5B8F696F1D4B333F008C309B /* JYHomeController.m in Sources */,
 				5B8856D31D4C48C7007C3BAF /* JYCityList.m in Sources */,
 				5B8856D91D4C4997007C3BAF /* JYArealist.m in Sources */,
 				5BA80A861D518734002D0999 /* JYCityData.m in Sources */,
+				846A762D1D5239410017A4AC /* JYNewsController.m in Sources */,
 				843D106B1D50DFB200B547AF /* JYCityChoiceController.m in Sources */,
 				5BA80A921D51EDA4002D0999 /* JYEjectMenu.m in Sources */,
 				5BA80A8C1D51C105002D0999 /* JYLocationCell.m in Sources */,
+				846A76241D5239190017A4AC /* JYStudyController.m in Sources */,
+				846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */,
 				5B599AFA1D4C9337002327A7 /* JYHotCityCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

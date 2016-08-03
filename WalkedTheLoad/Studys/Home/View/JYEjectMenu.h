@@ -8,8 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
+@protocol JYEjectMenuDelegate <NSObject>
+
+@optional
+- (void)ejectMenuBtnOnClick:(NSInteger)index;
+
+@end
+
 @interface JYEjectMenu : UIView
 
-+ (instancetype)ejectMenu;
++ (instancetype)ejectMenuWithArray:(NSArray *)array;
+
+@property (weak, nonatomic) id <JYEjectMenuDelegate>delegate;
 
 @end

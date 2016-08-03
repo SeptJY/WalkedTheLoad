@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
 
-#import "JYHomeController.h"
+#import "JYTabBarController.h"
 
 @interface AppDelegate () <CLLocationManagerDelegate>
 {
@@ -28,9 +28,7 @@
 {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
-    UINavigationController *navCtl = [[UINavigationController alloc] initWithRootViewController:[[JYHomeController alloc] init]];
-    
-    self.window.rootViewController = navCtl;
+    self.window.rootViewController = [[JYTabBarController alloc] init];
     
     [self.window makeKeyAndVisible];
     

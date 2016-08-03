@@ -113,7 +113,7 @@
 {
     if (!_ejectMenu) {
         
-        _ejectMenu = [JYEjectMenu ejectMenu];
+        _ejectMenu = [JYEjectMenu ejectMenuWithArray:@[@"扫一扫", @"我的名片", @"周围"]];
         
         _ejectMenu.hidden = YES;
         
@@ -141,8 +141,8 @@
 
 - (void)viewWillLayoutSubviews
 {
-    CGFloat ejectMenuW = 150;
-    CGFloat ejectMenuH = 250;
+    CGFloat ejectMenuW = 120;
+    CGFloat ejectMenuH = 130;
     self.ejectMenu.frame = CGRectMake(screenW - ejectMenuW - 10, 70, ejectMenuW, ejectMenuH);
 }
 
