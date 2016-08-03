@@ -14,4 +14,8 @@
 
 + (CGSize)sizeWithText:(NSString *)text font:(UIFont *)font maxSize:(CGSize)maxSize;
 
++ (BOOL)isLetterWithstring:(NSString *)string;
+
++ (NSString *)charactor:(NSString *)aString getFirstCharactor:(BOOL)isGetFirst;
+
 @end

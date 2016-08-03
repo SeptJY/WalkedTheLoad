@@ -9,11 +9,16 @@
 #import "JYCityChoiceController.h"
 #import "JYHotCityCell.h"
 #import "JYSearchBarCell.h"
+#import "JYLocationCell.h"
+#import "JYCityShowCell.h"
+#import "JYCityData.h"
 
 static NSString *hotCity = @"hotCity";
 static NSString *mSearchBar = @"searchBar";
+static NSString *location = @"location";
+static NSString *cityShow = @"cityShow";
 
-@interface JYCityChoiceController () <UISearchBarDelegate, JYHotCityCellDelegate, JYSearchBarCellDelegate, UITableViewDataSource, UITableViewDelegate>
+@interface JYCityChoiceController () <UISearchBarDelegate, JYHotCityCellDelegate, JYSearchBarCellDelegate, UITableViewDataSource, UITableViewDelegate, JYLocationCellDelegate>
 {
     UIView *_bgView;
 }
@@ -28,7 +33,15 @@ static NSString *mSearchBar = @"searchBar";
 /** tableView的右边索引 */
 @property (strong, nonatomic) NSMutableArray *indexsArray;
 
+/** 字母数组 */
+@property (strong, nonatomic) NSMutableArray *letterArray;
+
 @property (strong, nonatomic) NSArray *hotCityArray;
+
+@property (strong, nonatomic) UITableView *searchTableView;
+
+/** 本地搜索匹配后的数据 */
+@property (strong, nonatomic) NSMutableArray *searchArray;
 
 @end
 
@@ -89,6 +102,7 @@ static NSString *mSearchBar = @"searchBar";
     [self.indexsArray insertObject:UITableViewIndexSearch atIndex:0];
 }
 
+/** 主要的tableView */
 - (UITableView *)tableView
 {
     if (!_tableView) {
@@ -97,10 +111,27 @@ static NSString *mSearchBar = @"searchBar";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
+        _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         
         [self.view addSubview:_tableView];
     }
     return _tableView;
+}
+
+/** 主要的tableView */
+- (UITableView *)searchTableView
+{
+    if (!_searchTableView) {
+        _searchTableView = [[UITableView alloc] init];
+        
+        _searchTableView.delegate = self;
+        _searchTableView.dataSource = self;
+        _searchTableView.showsVerticalScrollIndicator = NO;
+        _searchTableView.hidden = YES;
+        
+        [self.view addSubview:_searchTableView];
+    }
+    return _searchTableView;
 }
 
 #pragma mark ---> 自定义导航栏
@@ -133,46 +164,73 @@ static NSString *mSearchBar = @"searchBar";
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.titlesArray.count + 1;
+    
+    if (tableView == self.tableView) {
+        return self.titlesArray.count + 1;
+    } else {
+        return 1;
+    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return (section >= 3) ? [self.cityDict[self.titlesArray[section - 1]] count] : 1;
+    if (tableView == self.tableView) {
+        return (section >= 3) ? [self.cityDict[self.titlesArray[section - 1]] count] : 1;
+    } else {
+        return self.searchArray.count;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    if (indexPath.section == 0) {      // 搜索城市
-        JYSearchBarCell *cell = [JYSearchBarCell cellWithTableView:tableView identifier:mSearchBar];
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.delegate = self;
-        return cell;
-    } else if (indexPath.section == 1) {    // 定位城市
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-        if (cell == nil) {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
+    if (tableView == self.tableView) {
+        switch (indexPath.section) {
+            case 0:
+            {
+                JYSearchBarCell *cell = [JYSearchBarCell cellWithTableView:tableView identifier:mSearchBar];
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                cell.delegate = self;
+                return cell;
+            }
+                break;
+            case 1:
+            {
+                JYLocationCell *cell = [JYLocationCell cellWithTableView:tableView identifier:location];
+                cell.backgroundColor = setColor(244, 244, 244);
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                cell.delegate = self;
+                return cell;
+            }
+                break;
+            case 2:
+            {
+                JYHotCityCell *cell = [JYHotCityCell cellWithTableView:tableView ddentifier:hotCity hotCity:self.hotCityArray];
+                cell.delegate = self;
+                cell.selectionStyle = UITableViewCellSelectionStyleNone;
+                cell.backgroundColor = setColor(244, 244, 244);
+                
+                return cell;
+            }
+                break;
+                
+            default:
+            {
+                NSArray *array = self.cityDict[self.titlesArray[indexPath.section - 1]];
+                JYCityShowCell *cell = [JYCityShowCell cellWithTableView:tableView identifier:cityShow];
+                
+                cell.textLabel.text = array[indexPath.row];
+                
+                return cell;
+            }
+                break;
         }
-        cell.backgroundColor = setColor(244, 244, 244);
-        cell.textLabel.text = @"SB";
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        return cell;
-    } else if (indexPath.section == 2) {   // 热门城市
-        JYHotCityCell *cell = [JYHotCityCell cellWithTableView:tableView ddentifier:hotCity hotCity:self.hotCityArray];
-        cell.delegate = self;
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.backgroundColor = setColor(244, 244, 244);
-        
-        return cell;
     } else {
-        NSArray *array = self.cityDict[self.titlesArray[indexPath.section - 1]];
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
         }
-        cell.textLabel.text = array[indexPath.row];
+        cell.textLabel.text = self.searchArray[indexPath.row];
         
         return cell;
     }
@@ -180,54 +238,80 @@ static NSString *mSearchBar = @"searchBar";
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    NSLog(@"%@", self.cityDict[self.indexsArray[indexPath.section]][indexPath.row]);
-    [JYDataManager sharedManager].currentCity = self.cityDict[self.indexsArray[indexPath.section]][indexPath.row];
+    if (tableView == self.tableView) {
+        if (self.cityDict[self.indexsArray[indexPath.section]][indexPath.row]) {
+            [JYDataManager sharedManager].currentCity = self.cityDict[self.indexsArray[indexPath.section]][indexPath.row];
+        }
+    } else {
+        [JYDataManager sharedManager].currentCity = self.searchArray[indexPath.row];
+    }
     
-    [self dismissViewControllerAnimated:YES completion:nil]; 
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 /** 设置头部的标题 */
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return (section == 0) ? nil : self.titlesArray[section - 1];
+    if (tableView == self.tableView) {
+        return (section == 0) ? nil : self.titlesArray[section - 1];
+    } else {
+        return nil;
+    }
 }
 
 /** 设置cell的高度 */
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    switch (indexPath.section) {
-        case 2:
-            return (self.hotCityArray.count / 3 == 0) ? (self.hotCityArray.count / 3 * 35 + 10 * (self.hotCityArray.count / 3 + 1)) : ((self.hotCityArray.count / 3 + 1) * 35 + 10 * (self.hotCityArray.count / 3 + 2));
-            break;
-            
-        default:
-            return 44;
-            break;
+    if (tableView == self.tableView) {
+        switch (indexPath.section) {
+            case 1:
+                return 55;
+                break;
+            case 2:
+                return (self.hotCityArray.count / 3 == 0) ? (self.hotCityArray.count / 3 * 35 + 10 * (self.hotCityArray.count / 3 + 1)) : ((self.hotCityArray.count / 3 + 1) * 35 + 10 * (self.hotCityArray.count / 3 + 2));
+                break;
+                
+            default:
+                return 44;
+                break;
+        }
+    } else {
+        return 44;
     }
 }
 
 /** 设置右边索引 */
 - (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView
 {
-    return self.indexsArray;
+    if (tableView == self.tableView) {
+        return self.indexsArray;
+    } else {
+        return nil;
+    }
 }
 
 /** 自定义头部视图 */
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, 30)];
-    
-    bgView.backgroundColor = setColor(244, 244, 244);
-    
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, screenW, 30)];
-    
-    label.text = (section == 0) ? nil : self.titlesArray[section - 1];
-    label.font = setBoldFont(14);
-    label.textColor = setColor(156, 156, 156);
-    
-    [bgView addSubview:label];
-    
-    return bgView;
+    if (tableView == self.tableView) {
+        // 1.自定义背景view
+        UIView *bgView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, screenW, 30)];
+        
+        bgView.backgroundColor = setColor(244, 244, 244);
+        
+        // 添加label显示文字
+        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(15, 0, screenW, 30)];
+        
+        label.text = (section == 0) ? nil : self.titlesArray[section - 1];
+        label.font = setBoldFont(14);
+        label.textColor = setColor(156, 156, 156);
+        
+        [bgView addSubview:label];
+        
+        return bgView;
+    } else {
+        return nil;
+    }
 }
 
 #pragma mark == JYHotCityCellDelegate
@@ -238,12 +322,20 @@ static NSString *mSearchBar = @"searchBar";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark ---> JYLocationCellDelegate
+- (void)locationCityBtnOnClick:(NSString *)city
+{
+    [JYDataManager sharedManager].currentCity = city;
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark == JYSearchBarCellDelegate
 /** 显示黑色背景View */
 - (void)searchBarTextDidBeginEditing
 {
     _bgView.hidden = NO;
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         _bgView.alpha = 0.6;
     }];
 }
@@ -251,17 +343,91 @@ static NSString *mSearchBar = @"searchBar";
 /** 隐藏黑色背景View */
 - (void)searchBarCancelButtonClicked
 {
-    [UIView animateWithDuration:0.5 animations:^{
-        _bgView.alpha = 0.0;
-    } completion:^(BOOL finished) {
-        _bgView.hidden = YES;
-    }];
+    // 当在显示搜索结果的时候点击取消的动画
+    if (self.searchTableView.hidden == NO) {
+        self.tableView.alpha = 0.7;
+        self.tableView.hidden = NO;
+        [UIView animateWithDuration:0.3 animations:^{
+            self.searchTableView.alpha = 0.0;
+            self.tableView.alpha = 1.0;
+        } completion:^(BOOL finished) {
+            self.searchTableView.hidden = YES;
+            self.searchTableView.alpha = 1.0;
+        }];
+    } else {
+        [UIView animateWithDuration:0.5 animations:^{
+            _bgView.alpha = 0.0;
+        } completion:^(BOOL finished) {
+            _bgView.hidden = YES;
+        }];
+    }
 }
 
 /** 当搜索内容变化时，执行该方法。很有用，可以实现时实搜索 */
 - (void)searchBarText:(NSString *)text textDidChange:(NSString *)searchText
 {
-    
+    if (text.length) {   // 当搜索框搜索内容不为空的时候
+        [self.searchArray removeAllObjects];
+        if ([NSString isLetterWithstring:text]) {   // 输入的是字母
+            
+            // 小写转成大写
+            NSString *upperCaseString2 = text.uppercaseString;
+            
+            // 获取字符串中的第一个字母
+            NSString *firstString = [upperCaseString2 substringToIndex:1];
+            
+            // 取出出入字符串中第一个字母key所存储的数据
+            NSArray *array = [self.cityDict objectForKey:firstString];
+            
+            // 遍历第一个字母key获取的数组
+            [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                JYCityData *cityData = [[JYCityData alloc] init];
+                
+                cityData.name = obj;
+                cityData.pinYin = [NSString charactor:obj getFirstCharactor:NO];
+                [self.letterArray addObject:cityData];
+            }];
+            
+            NSPredicate *pred = [NSPredicate predicateWithFormat:@"pinYin BEGINSWITH[c] %@", text];
+            
+            NSArray *smallArray = [self.letterArray filteredArrayUsingPredicate:pred];
+            
+            [smallArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+                JYCityData *model = obj;
+                [self.searchArray addObject:model.name];
+            }];
+        }
+        else {  // 输入文字的时候
+            NSArray *allKeys = [[self.cityDict allKeys] sortedArrayUsingSelector:@selector(compare:)];
+            
+            for (NSString *key in allKeys) {
+                NSArray *keyArray = self.cityDict[key];
+                
+                NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF BEGINSWITH[c] %@",text];
+                NSArray *array = [keyArray filteredArrayUsingPredicate:pred];
+                
+                [self.searchArray addObjectsFromArray:array];
+            }
+        }
+        
+        
+        [self.searchTableView reloadData];
+        _bgView.hidden = YES;
+        self.searchTableView.hidden = NO;
+    }
+    else     // 搜索框内容为空的时候，掩藏searchTableView，显示bgView
+    {
+        self.searchTableView.hidden = YES;
+        _bgView.hidden = NO;
+    }
+}
+
+#pragma mark ---> UIScrollViewDelegate
+/** 当第一次滑动的时候调用 */
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    // 发送通知，当滑动tableView的时候掩藏键盘
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"hiddenKeybord" object:nil];
 }
 
 #pragma mark ---> 数组懒加载
@@ -283,9 +449,28 @@ static NSString *mSearchBar = @"searchBar";
     return _indexsArray;
 }
 
+- (NSMutableArray *)letterArray
+{
+    if (!_letterArray) {
+        
+        _letterArray = [NSMutableArray array];
+    }
+    return _letterArray;
+}
+
+- (NSMutableArray *)searchArray
+{
+    if (!_searchArray) {
+        
+        _searchArray = [NSMutableArray array];
+    }
+    return _searchArray;
+}
+
 - (void)viewDidLayoutSubviews
 {
     self.tableView.frame = CGRectMake(0, 0, screenW, screenH);
+    self.searchTableView.frame = _bgView.frame;
 }
 
 @end

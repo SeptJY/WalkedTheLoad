@@ -8,10 +8,17 @@
 
 #import "JYHomeController.h"
 #import "JYCityChoiceController.h"
+#import "JYEjectMenu.h"
 
 @interface JYHomeController ()
 
 @property (strong, nonatomic) UIButton *leftCityBtn;
+@property (strong, nonatomic) UIButton *rightBtn;
+
+@property (assign, nonatomic) CGSize imgSize;
+
+@property (strong, nonatomic) JYEjectMenu *ejectMenu;
+
 
 @end
 
@@ -27,7 +34,6 @@
     self.view.backgroundColor = [UIColor whiteColor];
     
     [[JYDataManager sharedManager] addObserver:self forKeyPath:@"currentCity" options:NSKeyValueObservingOptionNew context:JYCureentCity];
-    
 }
 
 /**
@@ -46,6 +52,7 @@
         
         UIImage *image = [UIImage imageNamed:@"city_choose_icon"];
         
+        self.imgSize = image.size;
         [_leftCityBtn setImage:image forState:UIControlStateNormal];
         [_leftCityBtn setTitle:@"城市" forState:UIControlStateNormal];
         [_leftCityBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
@@ -76,6 +83,21 @@
     self.navigationController.navigationBar.barTintColor = JYMainColor;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.leftCityBtn];
+    
+    self.rightBtn = [[UIButton alloc] init];
+    
+    [self.rightBtn setImage:[UIImage imageNamed:@"home_add_icon"] forState:UIControlStateNormal];
+    
+    [self.rightBtn addTarget:self action:@selector(rightAddBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
+    self.rightBtn.size = CGSizeMake(20, 20);
+    
+    NSLog(@"%@", NSStringFromCGRect(self.rightBtn.frame));
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
+}
+
+- (void)rightAddBtnOnClick
+{
+    self.ejectMenu.hidden = !self.ejectMenu.hidden;
 }
 
 - (void)leftCityBtnOnColcik
@@ -87,13 +109,41 @@
     [self presentViewController:navCrl animated:YES completion:nil];
 }
 
+- (JYEjectMenu *)ejectMenu
+{
+    if (!_ejectMenu) {
+        
+        _ejectMenu = [JYEjectMenu ejectMenu];
+        
+        _ejectMenu.hidden = YES;
+        
+        [self.view addSubview:_ejectMenu];
+    }
+    return _ejectMenu;
+}
+
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if (context == JYCureentCity) {
+        
+        // 重新计算按钮的尺寸
+        CGSize size = [NSString sizeWithText:[JYDataManager sharedManager].currentCity font:setFont(15) maxSize:CGSizeMake(screenW / 4, 50)];
+        
+        // 设置按钮的文字在图片的右边
+        self.leftCityBtn.titleEdgeInsets = UIEdgeInsetsMake(0, -self.imgSize.width, 0, 0);
+        self.leftCityBtn.imageEdgeInsets = UIEdgeInsetsMake(0, size.width, 0, 0);
+        self.leftCityBtn.size = CGSizeMake(size.width + self.imgSize.width, 30);
         [self.leftCityBtn setTitle:[JYDataManager sharedManager].currentCity forState:UIControlStateNormal];
     } else {
         [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
     }
+}
+
+- (void)viewWillLayoutSubviews
+{
+    CGFloat ejectMenuW = 150;
+    CGFloat ejectMenuH = 250;
+    self.ejectMenu.frame = CGRectMake(screenW - ejectMenuW - 10, 70, ejectMenuW, ejectMenuH);
 }
 
 - (void)dealloc

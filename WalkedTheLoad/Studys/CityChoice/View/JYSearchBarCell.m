@@ -35,8 +35,16 @@
         // 修改UISearchBar 取消按钮的颜色和title
         [[UIBarButtonItem appearanceWhenContainedIn: [UISearchBar class], nil] setTitle:@"取消"];
         [[UIBarButtonItem appearanceWhenContainedIn: [UISearchBar class], nil] setTintColor:setColor(124, 124, 124)];
+        
+        // 注册通知，当滑动tableView的时候掩藏键盘
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(hiddenKeybord) name:@"hiddenKeybord" object:nil];
     }
     return self;
+}
+
+- (void)hiddenKeybord
+{
+    [self.searchBar resignFirstResponder];
 }
 
 /** 搜索框 */
@@ -118,6 +126,11 @@
     self.searchBar.frame = CGRectMake(0, 0, self.width - 10, self.height);
     
     self.lineView.frame = CGRectMake(0, self.height - 0.5, screenW, 0.5);
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
