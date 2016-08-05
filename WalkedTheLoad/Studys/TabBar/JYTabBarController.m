@@ -13,6 +13,8 @@
 #import "JYLifeController.h"
 #import "JYStudyController.h"
 
+#import "JYNavigationController.h"
+
 @interface JYTabBarController ()
 
 @end
@@ -69,7 +71,7 @@
     [vc.tabBarItem setTitleTextAttributes:selectedTextAttrs forState:UIControlStateSelected];
     
 //    vc.tabBarItem.selectedImage = [UIImage imageNamed:selectedImage];
-    [self addChildViewController:[[UINavigationController alloc] initWithRootViewController:vc]];
+    [self addChildViewController:[[JYNavigationController alloc] initWithRootViewController:vc]];
 }
 
 @end

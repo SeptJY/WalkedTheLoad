@@ -7,6 +7,7 @@
 //
 
 #import "JYEjectMenu.h"
+#import "JYMenuBtn.h"
 
 @interface JYEjectMenu ()
 
@@ -30,10 +31,13 @@
         
         for (int i = 0; i < array.count; i++) {
             
-            UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(10, 10 + i * btnH, btnW, btnH)];
+            JYMenuBtn *btn = [JYMenuBtn buttonWithType:UIButtonTypeCustom];
+            
+            btn.frame = CGRectMake(10, 10 + i * btnH, btnW, btnH);
             
             [btn setTitle:array[i] forState:UIControlStateNormal];
             btn.tag = i + 10;
+            [btn setImage:[UIImage imageNamed:@"item_list"] forState:UIControlStateNormal];
             btn.titleLabel.font = setBoldFont(15);
             [btn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
             [btn addTarget:self action:@selector(ejectMenuBtnOnClick:) forControlEvents:UIControlEventTouchUpInside];
@@ -56,7 +60,6 @@
 
 - (void)ejectMenuBtnOnClick:(UIButton *)btn
 {
-    NSLog(@"%@", btn.currentTitle);
     if (self.delegate && [self.delegate respondsToSelector:@selector(ejectMenuBtnOnClick:)]) {
         [self.delegate ejectMenuBtnOnClick:btn.tag];
     }

@@ -8,9 +8,11 @@
 
 #import "JYHomeController.h"
 #import "JYCityChoiceController.h"
+#import "JYScanController.h"
 #import "JYEjectMenu.h"
+#import "JYLoginController.h"
 
-@interface JYHomeController ()
+@interface JYHomeController () <JYEjectMenuDelegate>
 
 @property (strong, nonatomic) UIButton *leftCityBtn;
 @property (strong, nonatomic) UIButton *rightBtn;
@@ -91,13 +93,16 @@
     [self.rightBtn addTarget:self action:@selector(rightAddBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
     self.rightBtn.size = CGSizeMake(20, 20);
     
-    NSLog(@"%@", NSStringFromCGRect(self.rightBtn.frame));
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
 }
 
 - (void)rightAddBtnOnClick
 {
-    self.ejectMenu.hidden = !self.ejectMenu.hidden;
+//    self.ejectMenu.hidden = !self.ejectMenu.hidden;
+    
+    JYLoginController *loginCtl = [[JYLoginController alloc] init];
+    
+    [self.navigationController pushViewController:loginCtl animated:YES];
 }
 
 - (void)leftCityBtnOnColcik
@@ -116,10 +121,33 @@
         _ejectMenu = [JYEjectMenu ejectMenuWithArray:@[@"扫一扫", @"我的名片", @"周围"]];
         
         _ejectMenu.hidden = YES;
+        _ejectMenu.delegate = self;
         
         [self.view addSubview:_ejectMenu];
     }
     return _ejectMenu;
+}
+
+#pragma mark ---> JYEjectMenuDelegate
+- (void)ejectMenuBtnOnClick:(NSInteger)index
+{
+    self.ejectMenu.hidden = YES;
+    switch (index) {
+        case 10:
+        {
+//            UINavigationController *navCtl =
+            JYScanController *scanCtl = [[JYScanController alloc] init];
+            
+            [self.navigationController pushViewController:scanCtl animated:YES];
+        }
+            break;
+        case 11:
+            
+            break;
+        case 12:
+            
+            break;
+    }
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
@@ -142,7 +170,7 @@
 - (void)viewWillLayoutSubviews
 {
     CGFloat ejectMenuW = 120;
-    CGFloat ejectMenuH = 130;
+    CGFloat ejectMenuH = 135;
     self.ejectMenu.frame = CGRectMake(screenW - ejectMenuW - 10, 70, ejectMenuW, ejectMenuH);
 }
 

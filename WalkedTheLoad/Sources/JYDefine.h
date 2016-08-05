@@ -19,4 +19,10 @@
 #define setFont(r) [UIFont systemFontOfSize:(r)]
 #define setBoldFont(r) [UIFont boldSystemFontOfSize:(r)]
 
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define JYLog(...) NSLog(__VA_ARGS__)
+#else // 发布状态, 关闭LOG功能
+#define JYLog(...)
+#endif
+
 #endif /* JYDefine_h */
