@@ -11,6 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 #import <CoreGraphics/CoreGraphics.h>
 #import "JYSignUpController.h"
+#import "JYSignUpsController.h"
 
 #define kRotationDuration 4.0
 #define rotationViewWidth (screenW - 40)
@@ -48,6 +49,8 @@
 @property (strong, nonatomic) UITextField *userText;
 @property (strong, nonatomic) UITextField *pwdText;
 
+@property (strong, nonatomic) UIButton *backBtn;
+
 @end
 
 @implementation JYLoginController
@@ -80,6 +83,7 @@
     [self.bgView addSubview:self.userImgView];
     [self.bgView addSubview:self.pwdImgView];
     [self.bgView addSubview:self.userText];
+    [self.view addSubview:self.backBtn];
  
     [self setupConstraints];
 }
@@ -112,13 +116,18 @@
     self.view.layer.beginTime = timeSincePause;
 }
 
+/** 返回上一页 */
+- (void)backBtnOnClick
+{
+    self.navigationController.navigationBarHidden = NO;
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
 - (JYBackgroundView *)backgroundView
 {
     if (!_backgroundView) {
         
         _backgroundView = [[JYBackgroundView alloc] init];
-        
-        
      }
     return _backgroundView;
 }
@@ -197,6 +206,20 @@
     }
     return _othersLabel;
 }
+
+- (UIButton *)backBtn
+{
+    if (!_backBtn) {
+        
+        _backBtn = [[UIButton alloc] init];
+        
+        [_backBtn setImage:[UIImage imageNamed:@"login_back_icon"] forState:UIControlStateNormal];
+        [_backBtn addTarget:self action:@selector(backBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
+        _backBtn.tag = 12;
+    }
+    return _backBtn;
+}
+
 
 - (UIView *)leftLine
 {
@@ -282,7 +305,7 @@
 - (UIImageView *)userImgView
 {
     if (!_userImgView) {
-        _userImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"ic_landing_nickname"]];
+        _userImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login_head_icon"]];
     }
     return _userImgView;
 }
@@ -290,7 +313,7 @@
 - (UIImageView *)pwdImgView
 {
     if (!_pwdImgView) {
-        _pwdImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mm_normal"]];
+        _pwdImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login_password_icon"]];
     }
     return _pwdImgView;
 }
@@ -324,7 +347,7 @@
             NSLog(@"%@", btn.currentTitle);
             break;
         case 14:
-            [self.navigationController pushViewController:[[JYSignUpController alloc] init] animated:YES];
+            [self.navigationController pushViewController:[[JYSignUpsController alloc] init] animated:YES];
             break;
     }
 }
@@ -391,6 +414,13 @@
         make.top.equalTo(weakSelf.view).offset(100 - (rotationViewWidth * 5 / 14 - 10) * 0.5);
     }];
     
+    // 返回按钮
+    [self.backBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.size.mas_equalTo(CGSizeMake(35, 35));
+        make.top.equalTo(weakSelf.view).offset(20);
+        make.leading.equalTo(weakSelf.view).offset(15);
+    }];
+    
     // 输入框的背景view
     [self.bgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.bottom.equalTo(weakSelf.backgroundView).offset(-20);
@@ -410,7 +440,7 @@
     // 用户名的图标
     [self.userImgView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.leading.equalTo(weakSelf.bgView).offset(10);
-        make.centerY.mas_equalTo(weakSelf.userText);
+        make.centerY.mas_equalTo(weakSelf.userText).offset(-5);
         make.size.mas_equalTo(CGSizeMake(22.0, 22.0));
     }];
     

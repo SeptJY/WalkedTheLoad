@@ -1,44 +1,31 @@
 //
-//  JYSignUpController.m
-//  SeptWeiWei
+//  JYSignUpsController.m
+//  WalkedTheLoad
 //
-//  Created by admin on 16/4/20.
-//  Copyright © 2016年 九月. All rights reserved.
+//  Created by Sept on 16/8/6.
+//  Copyright © 2016年 丶九月. All rights reserved.
 //
 
-#import "JYSignUpController.h"
-#import "JYBackgroundView.h"
+#import "JYSignUpsController.h"
 
 #define rotationViewWidth (screenW - 40)
 #define kRotationDuration 4.0
 
-@interface JYSignUpController ()
-
-@property (strong, nonatomic) JYBackgroundView *backgroundView;
+@interface JYSignUpsController ()
 
 /** 用户头像 */
 @property (strong, nonatomic) UIImageView *userImgView;
 
 //转圈速度
-@property (assign, nonatomic) float rotationDuration;
+@property (assign, nonatomic) float rotationDuration; 
 
 @end
 
-@implementation JYSignUpController
+@implementation JYSignUpsController
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    // 设置背景图片
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    
-    imgView.image = [UIImage imageNamed:@"login_bg_icon"];
-    imgView.userInteractionEnabled = YES;
-    
-    [self.view addSubview:imgView];
+    // Do any additional setup after loading the view from its nib.
     
     [self initRound];
     [self startRotation];
@@ -79,17 +66,7 @@
 
 - (void)addSubView
 {
-    [self.view addSubview:self.backgroundView];
     [self.view addSubview:self.userImgView];
-}
-
-- (JYBackgroundView *)backgroundView
-{
-    if (!_backgroundView) {
-        
-        _backgroundView = [[JYBackgroundView alloc] init];
-    }
-    return _backgroundView;
 }
 
 - (UIImageView *)userImgView
@@ -105,15 +82,7 @@
 
 - (void)setupConstraints
 {
-    __weak JYSignUpController *weakSelf = self;
-    
-    // 自定义画图的背景view
-    [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(weakSelf.view);
-        make.top.equalTo(weakSelf.view).offset(100);
-        make.bottom.equalTo(weakSelf.view).offset(-150);
-        make.width.mas_equalTo(rotationViewWidth);
-    }];
+    __weak JYSignUpsController *weakSelf = self;
     
     // 旋转的图片
     [self.userImgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -122,5 +91,20 @@
         make.top.equalTo(weakSelf.view).offset(100 - (rotationViewWidth * 5 / 14 - 10) * 0.5);
     }];
 }
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

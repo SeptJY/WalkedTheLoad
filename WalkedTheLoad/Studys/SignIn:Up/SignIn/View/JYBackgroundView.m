@@ -7,7 +7,6 @@
 //
 
 #import "JYBackgroundView.h"
-#import "JYDefine.h"
 
 #define W self.frame.size.width
 #define H self.frame.size.height
@@ -22,6 +21,11 @@
         self.backgroundColor = [UIColor clearColor];
     }
     return self;
+}
+
+- (void)awakeFromNib
+{
+    self.backgroundColor = [UIColor clearColor];
 }
 
 - (void)drawRect:(CGRect)rect
@@ -44,6 +48,7 @@
     aPoints2[0] =CGPointMake(1, H);//坐标1
     aPoints2[1] =CGPointMake(W, H);//坐标2
     CGContextAddLines(ctx, aPoints2, 2);//添加线
+    CGContextSetLineWidth(ctx, 2);//线条的粗细
     
     CGContextDrawPath(ctx, kCGPathStroke); //根据坐标绘制路径
     
@@ -56,6 +61,7 @@
     CGContextDrawPath(ctx, kCGPathStroke); //根据坐标绘制路径
     
     // 右边横线
+    CGContextSetLineWidth(ctx, 1);
     CGPoint aPoints5[2];//坐标点
     aPoints5[0] =CGPointMake(W, 1);//坐标1
     aPoints5[1] =CGPointMake( (W - W * 5 / 14) / 2 + W * 5 / 14 - 0.5, 1);//坐标2
