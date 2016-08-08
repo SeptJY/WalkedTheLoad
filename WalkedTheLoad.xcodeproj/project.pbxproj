@@ -46,10 +46,18 @@
 		5B991C3C1D582505000B58C9 /* JYSignUpOnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C3B1D582505000B58C9 /* JYSignUpOnController.m */; };
 		5B991C3F1D582B22000B58C9 /* JYSignOnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C3E1D582B22000B58C9 /* JYSignOnController.m */; };
 		5B991C421D58345D000B58C9 /* JYSignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C411D58345D000B58C9 /* JYSignUpController.m */; };
+		5B991C471D586CE2000B58C9 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C451D586CE2000B58C9 /* MOBFoundation.framework */; };
+		5B991C481D586CE2000B58C9 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C461D586CE2000B58C9 /* SMS_SDK.framework */; };
+		5B991C4A1D586D2D000B58C9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C491D586D2C000B58C9 /* libz.tbd */; };
+		5B991C4C1D586D38000B58C9 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C4B1D586D38000B58C9 /* libicucore.tbd */; };
+		5B991C4E1D586D41000B58C9 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C4D1D586D41000B58C9 /* MessageUI.framework */; };
+		5B991C501D586D4B000B58C9 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C4F1D586D4B000B58C9 /* JavaScriptCore.framework */; };
+		5B991C521D586D53000B58C9 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C511D586D53000B58C9 /* libstdc++.tbd */; };
+		5B991C561D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */; };
+		5B991C591D588C81000B58C9 /* JYMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C581D588C81000B58C9 /* JYMineController.m */; };
 		6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */; };
 		846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A760D1D5237990017A4AC /* JYTabBarController.m */; };
 		846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A761D1D5238F40017A4AC /* JYLifeController.m */; };
-		846A76211D5239060017A4AC /* JYMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A76201D5239060017A4AC /* JYMineController.m */; };
 		846A76241D5239190017A4AC /* JYStudyController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A76231D5239190017A4AC /* JYStudyController.m */; };
 		846A762D1D5239410017A4AC /* JYNewsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A762C1D5239410017A4AC /* JYNewsController.m */; };
 /* End PBXBuildFile section */
@@ -153,12 +161,21 @@
 		5B991C3E1D582B22000B58C9 /* JYSignOnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSignOnController.m; sourceTree = "<group>"; };
 		5B991C401D58345D000B58C9 /* JYSignUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSignUpController.h; sourceTree = "<group>"; };
 		5B991C411D58345D000B58C9 /* JYSignUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSignUpController.m; sourceTree = "<group>"; };
+		5B991C451D586CE2000B58C9 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		5B991C461D586CE2000B58C9 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		5B991C491D586D2C000B58C9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5B991C4B1D586D38000B58C9 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		5B991C4D1D586D41000B58C9 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		5B991C4F1D586D4B000B58C9 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		5B991C511D586D53000B58C9 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		5B991C541D588C01000B58C9 /* UIScrollView+HeaderScaleImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HeaderScaleImage.h"; sourceTree = "<group>"; };
+		5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HeaderScaleImage.m"; sourceTree = "<group>"; };
+		5B991C571D588C81000B58C9 /* JYMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineController.h; sourceTree = "<group>"; };
+		5B991C581D588C81000B58C9 /* JYMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineController.m; sourceTree = "<group>"; };
 		846A760C1D5237990017A4AC /* JYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTabBarController.h; sourceTree = "<group>"; };
 		846A760D1D5237990017A4AC /* JYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTabBarController.m; sourceTree = "<group>"; };
 		846A761C1D5238F40017A4AC /* JYLifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLifeController.h; sourceTree = "<group>"; };
 		846A761D1D5238F40017A4AC /* JYLifeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYLifeController.m; sourceTree = "<group>"; };
-		846A761F1D5239060017A4AC /* JYMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineController.h; sourceTree = "<group>"; };
-		846A76201D5239060017A4AC /* JYMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineController.m; sourceTree = "<group>"; };
 		846A76221D5239190017A4AC /* JYStudyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYStudyController.h; sourceTree = "<group>"; };
 		846A76231D5239190017A4AC /* JYStudyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYStudyController.m; sourceTree = "<group>"; };
 		846A762B1D5239410017A4AC /* JYNewsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYNewsController.h; sourceTree = "<group>"; };
@@ -172,6 +189,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B991C521D586D53000B58C9 /* libstdc++.tbd in Frameworks */,
+				5B991C501D586D4B000B58C9 /* JavaScriptCore.framework in Frameworks */,
+				5B991C4E1D586D41000B58C9 /* MessageUI.framework in Frameworks */,
+				5B991C4C1D586D38000B58C9 /* libicucore.tbd in Frameworks */,
+				5B991C4A1D586D2D000B58C9 /* libz.tbd in Frameworks */,
+				5B991C481D586CE2000B58C9 /* SMS_SDK.framework in Frameworks */,
+				5B991C471D586CE2000B58C9 /* MOBFoundation.framework in Frameworks */,
 				43796BE042C0F9972053D2F5 /* libPods-WalkedTheLoad.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +221,11 @@
 		400186E56CFD7A598D1D7DCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B991C511D586D53000B58C9 /* libstdc++.tbd */,
+				5B991C4F1D586D4B000B58C9 /* JavaScriptCore.framework */,
+				5B991C4D1D586D41000B58C9 /* MessageUI.framework */,
+				5B991C4B1D586D38000B58C9 /* libicucore.tbd */,
+				5B991C491D586D2C000B58C9 /* libz.tbd */,
 				16A55C5D1CAA0ADE8927EB64 /* libPods-WalkedTheLoad.a */,
 				D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */,
 			);
@@ -225,6 +254,7 @@
 		5B834FF91D52EA930009634C /* Third      第三方工具 */ = {
 			isa = PBXGroup;
 			children = (
+				5B991C431D586CA5000B58C9 /* SMSDK     短信SDK */,
 			);
 			name = "Third      第三方工具";
 			path = Third;
@@ -618,6 +648,34 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		5B991C431D586CA5000B58C9 /* SMSDK     短信SDK */ = {
+			isa = PBXGroup;
+			children = (
+				5B991C531D588C01000B58C9 /* YZHeaderScaleImage */,
+				5B991C441D586CE2000B58C9 /* SMS_SDK */,
+			);
+			name = "SMSDK     短信SDK";
+			path = SMSDK;
+			sourceTree = "<group>";
+		};
+		5B991C441D586CE2000B58C9 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				5B991C451D586CE2000B58C9 /* MOBFoundation.framework */,
+				5B991C461D586CE2000B58C9 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		5B991C531D588C01000B58C9 /* YZHeaderScaleImage */ = {
+			isa = PBXGroup;
+			children = (
+				5B991C541D588C01000B58C9 /* UIScrollView+HeaderScaleImage.h */,
+				5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */,
+			);
+			path = YZHeaderScaleImage;
+			sourceTree = "<group>";
+		};
 		60AF815046032D36DEFE6B58 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -687,8 +745,8 @@
 		846A76141D5238560017A4AC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				846A761F1D5239060017A4AC /* JYMineController.h */,
-				846A76201D5239060017A4AC /* JYMineController.m */,
+				5B991C571D588C81000B58C9 /* JYMineController.h */,
+				5B991C581D588C81000B58C9 /* JYMineController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1014,6 +1072,7 @@
 				5B83501D1D52EC540009634C /* JYCityChoiceController.m in Sources */,
 				5B8350331D52ECA00009634C /* JYMenuBtn.m in Sources */,
 				5B83501F1D52EC540009634C /* JYArealist.m in Sources */,
+				5B991C561D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m in Sources */,
 				5B599AFD1D4CAB13002327A7 /* JYDataManager.m in Sources */,
 				5B8350011D52EAC00009634C /* JYScanErWeiCode.m in Sources */,
 				5B8350211D52EC540009634C /* JYCityList.m in Sources */,
@@ -1028,7 +1087,6 @@
 				5B8350231D52EC540009634C /* JYCityShowCell.m in Sources */,
 				5B8350251D52EC540009634C /* JYLocationCell.m in Sources */,
 				5B8F697D1D4B4DCF008C309B /* JYNSString+Extension.m in Sources */,
-				846A76211D5239060017A4AC /* JYMineController.m in Sources */,
 				5B8F69301D4B2EFD008C309B /* AppDelegate.m in Sources */,
 				5B8350311D52ECA00009634C /* JYHomeController.m in Sources */,
 				846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */,
@@ -1038,6 +1096,7 @@
 				5B8350261D52EC540009634C /* JYSearchBarCell.m in Sources */,
 				5B83503B1D52ED500009634C /* JYScanController.m in Sources */,
 				846A762D1D5239410017A4AC /* JYNewsController.m in Sources */,
+				5B991C591D588C81000B58C9 /* JYMineController.m in Sources */,
 				5B83501E1D52EC540009634C /* JYAllCity.m in Sources */,
 				846A76241D5239190017A4AC /* JYStudyController.m in Sources */,
 				5B8350431D53281F0009634C /* JYPreviewView.m in Sources */,
@@ -1181,6 +1240,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WalkedTheLoad/Others/Tool/Third/SMSDK/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = WalkedTheLoad/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = WalkedTheLoad/Info.plist;
@@ -1200,6 +1263,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WalkedTheLoad/Others/Tool/Third/SMSDK/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = WalkedTheLoad/PrefixHeader.pch;
 				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = WalkedTheLoad/Info.plist;

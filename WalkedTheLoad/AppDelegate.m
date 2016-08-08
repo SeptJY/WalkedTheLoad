@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
+#import <SMS_SDK/SMSSDK.h>
 
 #import "JYTabBarController.h"
+
+#define SMAppKey @"b9f5d1711f90"
+#define SMAppSecret @"2ff7f66b22c1626a32fe2b257521eb9a"
 
 @interface AppDelegate () <CLLocationManagerDelegate>
 {
@@ -26,6 +30,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //初始化应用，appKey和appSecret从后台申请得
+    [SMSSDK registerApp:SMAppKey
+             withSecret:SMAppSecret];
+    
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     self.window.rootViewController = [[JYTabBarController alloc] init];
