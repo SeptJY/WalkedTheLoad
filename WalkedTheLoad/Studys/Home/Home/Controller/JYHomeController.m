@@ -10,7 +10,8 @@
 #import "JYCityChoiceController.h"
 #import "JYScanController.h"
 #import "JYEjectMenu.h"
-#import "JYLoginController.h"
+//#import "JYLoginController.h"
+#import "JYSignOnController.h"
 
 @interface JYHomeController () <JYEjectMenuDelegate>
 
@@ -100,9 +101,10 @@
 {
 //    self.ejectMenu.hidden = !self.ejectMenu.hidden;
     
-    JYLoginController *loginCtl = [[JYLoginController alloc] init];
+    JYSignOnController *signOnCtl = [[JYSignOnController alloc] init];
+    signOnCtl.bgSize = CGSizeMake(rotationViewWidth, rotationViewWidth * 9/ 14);
     
-    [self.navigationController pushViewController:loginCtl animated:YES];
+    [self.navigationController pushViewController:signOnCtl animated:YES];
 }
 
 - (void)leftCityBtnOnColcik

@@ -28,9 +28,7 @@
 		5B83503E1D53163B0009634C /* JYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B83503D1D53163B0009634C /* JYNavigationController.m */; };
 		5B8350431D53281F0009634C /* JYPreviewView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8350401D53281F0009634C /* JYPreviewView.m */; };
 		5B8350441D53281F0009634C /* JYScanBgView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8350421D53281F0009634C /* JYScanBgView.m */; };
-		5B8481AC1D548E390069199A /* JYLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8481AB1D548E390069199A /* JYLoginController.m */; };
 		5B8481AF1D548E4E0069199A /* JYBackgroundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8481AE1D548E4E0069199A /* JYBackgroundView.m */; };
-		5B8481B21D548E6D0069199A /* JYSignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8481B11D548E6D0069199A /* JYSignUpController.m */; };
 		5B8856CD1D4C476D007C3BAF /* citydata.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8856CC1D4C476D007C3BAF /* citydata.plist */; };
 		5B8856D01D4C4803007C3BAF /* JYLocation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8856CF1D4C4803007C3BAF /* JYLocation.m */; };
 		5B8856DB1D4C4E62007C3BAF /* city.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5B8856DA1D4C4E62007C3BAF /* city.plist */; };
@@ -43,8 +41,11 @@
 		5B8F697D1D4B4DCF008C309B /* JYNSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69781D4B4DCF008C309B /* JYNSString+Extension.m */; };
 		5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697A1D4B4DCF008C309B /* UIImage+CKExtension.m */; };
 		5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */; };
-		5BA057CF1D55D62A0085D8D5 /* JYSignUpsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA057CD1D55D6290085D8D5 /* JYSignUpsController.m */; };
-		5BA057D01D55D62A0085D8D5 /* JYSignUpsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA057CE1D55D6290085D8D5 /* JYSignUpsController.xib */; };
+		5B991C371D5814F7000B58C9 /* JYContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C361D5814F7000B58C9 /* JYContentView.m */; };
+		5B991C391D581511000B58C9 /* JYContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B991C381D581511000B58C9 /* JYContentView.xib */; };
+		5B991C3C1D582505000B58C9 /* JYSignUpOnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C3B1D582505000B58C9 /* JYSignUpOnController.m */; };
+		5B991C3F1D582B22000B58C9 /* JYSignOnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C3E1D582B22000B58C9 /* JYSignOnController.m */; };
+		5B991C421D58345D000B58C9 /* JYSignUpController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C411D58345D000B58C9 /* JYSignUpController.m */; };
 		6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */; };
 		846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A760D1D5237990017A4AC /* JYTabBarController.m */; };
 		846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A761D1D5238F40017A4AC /* JYLifeController.m */; };
@@ -114,12 +115,8 @@
 		5B8350401D53281F0009634C /* JYPreviewView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYPreviewView.m; sourceTree = "<group>"; };
 		5B8350411D53281F0009634C /* JYScanBgView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYScanBgView.h; sourceTree = "<group>"; };
 		5B8350421D53281F0009634C /* JYScanBgView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYScanBgView.m; sourceTree = "<group>"; };
-		5B8481AA1D548E390069199A /* JYLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLoginController.h; sourceTree = "<group>"; };
-		5B8481AB1D548E390069199A /* JYLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYLoginController.m; sourceTree = "<group>"; };
 		5B8481AD1D548E4E0069199A /* JYBackgroundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYBackgroundView.h; sourceTree = "<group>"; };
 		5B8481AE1D548E4E0069199A /* JYBackgroundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYBackgroundView.m; sourceTree = "<group>"; };
-		5B8481B01D548E6D0069199A /* JYSignUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSignUpController.h; sourceTree = "<group>"; };
-		5B8481B11D548E6D0069199A /* JYSignUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSignUpController.m; sourceTree = "<group>"; };
 		5B8856CC1D4C476D007C3BAF /* citydata.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = citydata.plist; sourceTree = "<group>"; };
 		5B8856CE1D4C4803007C3BAF /* JYLocation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLocation.h; sourceTree = "<group>"; };
 		5B8856CF1D4C4803007C3BAF /* JYLocation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYLocation.m; sourceTree = "<group>"; };
@@ -147,9 +144,15 @@
 		5B8F697B1D4B4DCF008C309B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5B8F69831D4B5ADE008C309B /* JYNotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNotes.h; sourceTree = "<group>"; };
-		5BA057CC1D55D6290085D8D5 /* JYSignUpsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSignUpsController.h; sourceTree = "<group>"; };
-		5BA057CD1D55D6290085D8D5 /* JYSignUpsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSignUpsController.m; sourceTree = "<group>"; };
-		5BA057CE1D55D6290085D8D5 /* JYSignUpsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYSignUpsController.xib; sourceTree = "<group>"; };
+		5B991C351D5814F7000B58C9 /* JYContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYContentView.h; sourceTree = "<group>"; };
+		5B991C361D5814F7000B58C9 /* JYContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYContentView.m; sourceTree = "<group>"; };
+		5B991C381D581511000B58C9 /* JYContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYContentView.xib; sourceTree = "<group>"; };
+		5B991C3A1D582504000B58C9 /* JYSignUpOnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSignUpOnController.h; sourceTree = "<group>"; };
+		5B991C3B1D582505000B58C9 /* JYSignUpOnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSignUpOnController.m; sourceTree = "<group>"; };
+		5B991C3D1D582B22000B58C9 /* JYSignOnController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSignOnController.h; sourceTree = "<group>"; };
+		5B991C3E1D582B22000B58C9 /* JYSignOnController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSignOnController.m; sourceTree = "<group>"; };
+		5B991C401D58345D000B58C9 /* JYSignUpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYSignUpController.h; sourceTree = "<group>"; };
+		5B991C411D58345D000B58C9 /* JYSignUpController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYSignUpController.m; sourceTree = "<group>"; };
 		846A760C1D5237990017A4AC /* JYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTabBarController.h; sourceTree = "<group>"; };
 		846A760D1D5237990017A4AC /* JYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTabBarController.m; sourceTree = "<group>"; };
 		846A761C1D5238F40017A4AC /* JYLifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLifeController.h; sourceTree = "<group>"; };
@@ -395,8 +398,8 @@
 		5B8481A51D548E1B0069199A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5B8481AA1D548E390069199A /* JYLoginController.h */,
-				5B8481AB1D548E390069199A /* JYLoginController.m */,
+				5B991C3D1D582B22000B58C9 /* JYSignOnController.h */,
+				5B991C3E1D582B22000B58C9 /* JYSignOnController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,11 +426,8 @@
 		5B8481A81D548E1B0069199A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5B8481B01D548E6D0069199A /* JYSignUpController.h */,
-				5B8481B11D548E6D0069199A /* JYSignUpController.m */,
-				5BA057CC1D55D6290085D8D5 /* JYSignUpsController.h */,
-				5BA057CD1D55D6290085D8D5 /* JYSignUpsController.m */,
-				5BA057CE1D55D6290085D8D5 /* JYSignUpsController.xib */,
+				5B991C401D58345D000B58C9 /* JYSignUpController.h */,
+				5B991C411D58345D000B58C9 /* JYSignUpController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -435,6 +435,9 @@
 		5B8481A91D548E1B0069199A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B991C351D5814F7000B58C9 /* JYContentView.h */,
+				5B991C361D5814F7000B58C9 /* JYContentView.m */,
+				5B991C381D581511000B58C9 /* JYContentView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -587,6 +590,8 @@
 				5B8856CF1D4C4803007C3BAF /* JYLocation.m */,
 				5B83503C1D53163B0009634C /* JYNavigationController.h */,
 				5B83503D1D53163B0009634C /* JYNavigationController.m */,
+				5B991C3A1D582504000B58C9 /* JYSignUpOnController.h */,
+				5B991C3B1D582505000B58C9 /* JYSignUpOnController.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -882,8 +887,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B599AF71D4C7E22002327A7 /* citydict.plist in Resources */,
+				5B991C391D581511000B58C9 /* JYContentView.xib in Resources */,
 				5B8F693B1D4B2EFD008C309B /* LaunchScreen.storyboard in Resources */,
-				5BA057D01D55D62A0085D8D5 /* JYSignUpsController.xib in Resources */,
 				5B8856DB1D4C4E62007C3BAF /* city.plist in Resources */,
 				5B8F69381D4B2EFD008C309B /* Assets.xcassets in Resources */,
 				5B8856CD1D4C476D007C3BAF /* citydata.plist in Resources */,
@@ -1004,19 +1009,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B991C3F1D582B22000B58C9 /* JYSignOnController.m in Sources */,
 				5B8350221D52EC540009634C /* JYProvinceList.m in Sources */,
 				5B83501D1D52EC540009634C /* JYCityChoiceController.m in Sources */,
 				5B8350331D52ECA00009634C /* JYMenuBtn.m in Sources */,
 				5B83501F1D52EC540009634C /* JYArealist.m in Sources */,
 				5B599AFD1D4CAB13002327A7 /* JYDataManager.m in Sources */,
-				5B8481B21D548E6D0069199A /* JYSignUpController.m in Sources */,
 				5B8350011D52EAC00009634C /* JYScanErWeiCode.m in Sources */,
 				5B8350211D52EC540009634C /* JYCityList.m in Sources */,
+				5B991C3C1D582505000B58C9 /* JYSignUpOnController.m in Sources */,
 				5B8350321D52ECA00009634C /* JYEjectMenu.m in Sources */,
 				5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */,
 				5B8856D01D4C4803007C3BAF /* JYLocation.m in Sources */,
 				5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */,
 				5B8481AF1D548E4E0069199A /* JYBackgroundView.m in Sources */,
+				5B991C371D5814F7000B58C9 /* JYContentView.m in Sources */,
 				5B83503E1D53163B0009634C /* JYNavigationController.m in Sources */,
 				5B8350231D52EC540009634C /* JYCityShowCell.m in Sources */,
 				5B8350251D52EC540009634C /* JYLocationCell.m in Sources */,
@@ -1026,13 +1033,12 @@
 				5B8350311D52ECA00009634C /* JYHomeController.m in Sources */,
 				846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */,
 				5B8350441D53281F0009634C /* JYScanBgView.m in Sources */,
-				5B8481AC1D548E390069199A /* JYLoginController.m in Sources */,
+				5B991C421D58345D000B58C9 /* JYSignUpController.m in Sources */,
 				5B8F692D1D4B2EFD008C309B /* main.m in Sources */,
 				5B8350261D52EC540009634C /* JYSearchBarCell.m in Sources */,
 				5B83503B1D52ED500009634C /* JYScanController.m in Sources */,
 				846A762D1D5239410017A4AC /* JYNewsController.m in Sources */,
 				5B83501E1D52EC540009634C /* JYAllCity.m in Sources */,
-				5BA057CF1D55D62A0085D8D5 /* JYSignUpsController.m in Sources */,
 				846A76241D5239190017A4AC /* JYStudyController.m in Sources */,
 				5B8350431D53281F0009634C /* JYPreviewView.m in Sources */,
 				5B8350201D52EC540009634C /* JYCityData.m in Sources */,

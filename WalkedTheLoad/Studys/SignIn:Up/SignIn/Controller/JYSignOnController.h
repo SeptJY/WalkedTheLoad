@@ -1,5 +1,5 @@
 //
-//  JYSignUpController.h
+//  JYSignOnController.h
 //  WalkedTheLoad
 //
 //  Created by Sept on 16/8/8.
@@ -8,6 +8,6 @@
 
 #import "JYSignUpOnController.h"
 
-@interface JYSignUpController : JYSignUpOnController
+@interface JYSignOnController : JYSignUpOnController
 
 @end

@@ -7,20 +7,13 @@
 //
 
 #import "JYSignUpController.h"
-#import "JYBackgroundView.h"
-
-#define rotationViewWidth (screenW - 40)
-#define kRotationDuration 4.0
+#import "JYContentView.h"
 
 @interface JYSignUpController ()
 
-@property (strong, nonatomic) JYBackgroundView *backgroundView;
+@property (strong, nonatomic) JYContentView *mContentView;
 
-/** 用户头像 */
-@property (strong, nonatomic) UIImageView *userImgView;
-
-//转圈速度
-@property (assign, nonatomic) float rotationDuration;
+@property (strong, nonatomic) UIButton *signUpBtn;
 
 @end
 
@@ -30,96 +23,78 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor whiteColor];
-    
-    // 设置背景图片
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:self.view.bounds];
-    
-    imgView.image = [UIImage imageNamed:@"login_bg_icon"];
-    imgView.userInteractionEnabled = YES;
-    
-    [self.view addSubview:imgView];
-    
-    [self initRound];
-    [self startRotation];
-    
     [self addSubView];
     
-    [self setupConstraints];
+    [self childSetupConstraints];
 }
 
-- (void)initRound
-{
-    //Rotation
-    CABasicAnimation* rotationAnimation;
-    rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-    rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 ];
-    
-    //default RotationDuration value
-    if (self.rotationDuration == 0) {
-        self.rotationDuration = kRotationDuration;
-    }
-    
-    rotationAnimation.duration = self.rotationDuration;
-    rotationAnimation.repeatCount = FLT_MAX;
-    rotationAnimation.cumulative = NO;
-    rotationAnimation.removedOnCompletion = NO; //No Remove
-    [self.userImgView.layer addAnimation:rotationAnimation forKey:@"rotation"];
-}
-
-- (void)startRotation
-{
-    self.view.layer.speed = 1.0;
-    self.view.layer.beginTime = 0.0;
-    CFTimeInterval pausedTime = [self.view.layer timeOffset];
-    CFTimeInterval timeSincePause = [self.view.layer convertTime:CACurrentMediaTime() fromLayer:nil] - pausedTime;
-    self.view.layer.beginTime = timeSincePause;
-}
-
-
+/** 添加子控件 */
 - (void)addSubView
 {
-    [self.view addSubview:self.backgroundView];
-    [self.view addSubview:self.userImgView];
+    [self.backgroundView addSubview:self.mContentView];
+    [self.view addSubview:self.signUpBtn];
 }
 
-- (JYBackgroundView *)backgroundView
+/** 重新父类的方法，解决pop过后导航栏不能掩藏的问题 */
+- (void)backBtnOnClick
 {
-    if (!_backgroundView) {
-        
-        _backgroundView = [[JYBackgroundView alloc] init];
-    }
-    return _backgroundView;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (UIImageView *)userImgView
+#pragma mark ---> 懒加载
+- (JYContentView *)mContentView
 {
-    if (!_userImgView) {
+    if (!_mContentView) {
         
-        _userImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"login_rotation_icon"]];
+        _mContentView = [JYContentView contenetView];
         
-        _userImgView.userInteractionEnabled = YES;
+        _mContentView.backgroundColor = [UIColor clearColor];
     }
-    return _userImgView;
+    return _mContentView;
 }
 
-- (void)setupConstraints
+- (UIButton *)signUpBtn
+{
+    if (!_signUpBtn) {
+        
+        _signUpBtn = [[UIButton alloc] init];
+        
+        _signUpBtn.backgroundColor = [UIColor clearColor];
+        _signUpBtn.layer.borderWidth = 1;
+        _signUpBtn.layer.borderColor = JYMainColor.CGColor;
+        [_signUpBtn setTitle:@"注册" forState:UIControlStateNormal];
+        _signUpBtn.titleLabel.font = setBoldFont(15);
+        [_signUpBtn setTitleColor:JYMainColor forState:UIControlStateNormal];
+        _signUpBtn.layer.cornerRadius = 4;
+        [_signUpBtn addTarget:self action:@selector(signUpBtnOnClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _signUpBtn;
+}
+
+#pragma mark ---> 注册按钮的点击事件
+- (void)signUpBtnOnClick
+{
+    
+}
+
+#pragma mark ---> 设置控件的约束
+- (void)childSetupConstraints
 {
     __weak JYSignUpController *weakSelf = self;
     
-    // 自定义画图的背景view
-    [self.backgroundView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(weakSelf.view);
-        make.top.equalTo(weakSelf.view).offset(100);
-        make.bottom.equalTo(weakSelf.view).offset(-150);
-        make.width.mas_equalTo(rotationViewWidth);
+    // 注册的内容视图
+    [self.mContentView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.equalTo(weakSelf.backgroundView).offset(10);
+        make.trailing.equalTo(weakSelf.backgroundView).offset(-10);
+        make.bottom.equalTo(weakSelf.backgroundView);
+        make.top.equalTo(weakSelf.userImgBtn.mas_bottom).offset(8);
     }];
     
-    // 旋转的图片
-    [self.userImgView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.mas_equalTo(weakSelf.view);
-        make.size.mas_equalTo(CGSizeMake(rotationViewWidth * 5 / 14 - 10, rotationViewWidth * 5 / 14 - 10));
-        make.top.equalTo(weakSelf.view).offset(100 - (rotationViewWidth * 5 / 14 - 10) * 0.5);
+    // 注册按钮
+    [self.signUpBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.leading.trailing.mas_equalTo(weakSelf.backgroundView);
+        make.height.mas_equalTo(40);
+        make.top.mas_equalTo(weakSelf.backgroundView.mas_bottom).offset(25);
     }];
 }
 
