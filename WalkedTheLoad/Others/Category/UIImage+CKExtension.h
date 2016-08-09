@@ -39,5 +39,6 @@
 
 + (UIImage *)createLongExposure:(NSArray *)images;
 
++ (UIImage *)clipYuanXingImg:(UIImage *)image;
 
 @end

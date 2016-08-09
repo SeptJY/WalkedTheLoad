@@ -41,6 +41,13 @@
 		5B8F697D1D4B4DCF008C309B /* JYNSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69781D4B4DCF008C309B /* JYNSString+Extension.m */; };
 		5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697A1D4B4DCF008C309B /* UIImage+CKExtension.m */; };
 		5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */; };
+		5B93CE031D597B0300BF6041 /* JYMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE021D597B0300BF6041 /* JYMineHeadView.m */; };
+		5B93CE0C1D59BCC700BF6041 /* JARoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE061D59BCC700BF6041 /* JARoundCell.m */; };
+		5B93CE0D1D59BCC700BF6041 /* JARoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B93CE071D59BCC700BF6041 /* JARoundCell.xib */; };
+		5B93CE0E1D59BCC700BF6041 /* LXRoundLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE091D59BCC700BF6041 /* LXRoundLayout.m */; };
+		5B93CE0F1D59BCC700BF6041 /* LXRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE0B1D59BCC700BF6041 /* LXRoundView.m */; };
+		5B93CE131D59D0A900BF6041 /* JYRollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE121D59D0A900BF6041 /* JYRollingView.m */; };
+		5B93CE161D59D17700BF6041 /* JYTitleScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE151D59D17700BF6041 /* JYTitleScroller.m */; };
 		5B991C371D5814F7000B58C9 /* JYContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C361D5814F7000B58C9 /* JYContentView.m */; };
 		5B991C391D581511000B58C9 /* JYContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B991C381D581511000B58C9 /* JYContentView.xib */; };
 		5B991C3C1D582505000B58C9 /* JYSignUpOnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C3B1D582505000B58C9 /* JYSignUpOnController.m */; };
@@ -152,6 +159,19 @@
 		5B8F697B1D4B4DCF008C309B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5B8F69831D4B5ADE008C309B /* JYNotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNotes.h; sourceTree = "<group>"; };
+		5B93CE011D597B0300BF6041 /* JYMineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYMineHeadView.h; path = WalkedTheLoad/Studys/Mine/Controller/JYMineHeadView.h; sourceTree = SOURCE_ROOT; };
+		5B93CE021D597B0300BF6041 /* JYMineHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYMineHeadView.m; path = WalkedTheLoad/Studys/Mine/Controller/JYMineHeadView.m; sourceTree = SOURCE_ROOT; };
+		5B93CE051D59BCC700BF6041 /* JARoundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARoundCell.h; sourceTree = "<group>"; };
+		5B93CE061D59BCC700BF6041 /* JARoundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARoundCell.m; sourceTree = "<group>"; };
+		5B93CE071D59BCC700BF6041 /* JARoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JARoundCell.xib; sourceTree = "<group>"; };
+		5B93CE081D59BCC700BF6041 /* LXRoundLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRoundLayout.h; sourceTree = "<group>"; };
+		5B93CE091D59BCC700BF6041 /* LXRoundLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRoundLayout.m; sourceTree = "<group>"; };
+		5B93CE0A1D59BCC700BF6041 /* LXRoundView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRoundView.h; sourceTree = "<group>"; };
+		5B93CE0B1D59BCC700BF6041 /* LXRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRoundView.m; sourceTree = "<group>"; };
+		5B93CE111D59D0A900BF6041 /* JYRollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYRollingView.h; sourceTree = "<group>"; };
+		5B93CE121D59D0A900BF6041 /* JYRollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYRollingView.m; sourceTree = "<group>"; };
+		5B93CE141D59D17700BF6041 /* JYTitleScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYTitleScroller.h; path = WalkedTheLoad/Studys/Mine/Controller/JYTitleScroller.h; sourceTree = SOURCE_ROOT; };
+		5B93CE151D59D17700BF6041 /* JYTitleScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYTitleScroller.m; path = WalkedTheLoad/Studys/Mine/Controller/JYTitleScroller.m; sourceTree = SOURCE_ROOT; };
 		5B991C351D5814F7000B58C9 /* JYContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYContentView.h; sourceTree = "<group>"; };
 		5B991C361D5814F7000B58C9 /* JYContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYContentView.m; sourceTree = "<group>"; };
 		5B991C381D581511000B58C9 /* JYContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYContentView.xib; sourceTree = "<group>"; };
@@ -245,6 +265,7 @@
 		5B834FF81D52EA930009634C /* MyTool     我的工具 */ = {
 			isa = PBXGroup;
 			children = (
+				5B93CE101D59D0A900BF6041 /* JYRollingImages    图片轮播 */,
 				5B834FFA1D52EAB90009634C /* Scan     扫一扫 */,
 			);
 			name = "MyTool     我的工具";
@@ -254,6 +275,8 @@
 		5B834FF91D52EA930009634C /* Third      第三方工具 */ = {
 			isa = PBXGroup;
 			children = (
+				5B93CE041D59BCC700BF6041 /* RoundItem */,
+				5B991C531D588C01000B58C9 /* YZHeaderScaleImage */,
 				5B991C431D586CA5000B58C9 /* SMSDK     短信SDK */,
 			);
 			name = "Third      第三方工具";
@@ -648,10 +671,33 @@
 			path = Manager;
 			sourceTree = "<group>";
 		};
+		5B93CE041D59BCC700BF6041 /* RoundItem */ = {
+			isa = PBXGroup;
+			children = (
+				5B93CE051D59BCC700BF6041 /* JARoundCell.h */,
+				5B93CE061D59BCC700BF6041 /* JARoundCell.m */,
+				5B93CE071D59BCC700BF6041 /* JARoundCell.xib */,
+				5B93CE081D59BCC700BF6041 /* LXRoundLayout.h */,
+				5B93CE091D59BCC700BF6041 /* LXRoundLayout.m */,
+				5B93CE0A1D59BCC700BF6041 /* LXRoundView.h */,
+				5B93CE0B1D59BCC700BF6041 /* LXRoundView.m */,
+			);
+			path = RoundItem;
+			sourceTree = "<group>";
+		};
+		5B93CE101D59D0A900BF6041 /* JYRollingImages    图片轮播 */ = {
+			isa = PBXGroup;
+			children = (
+				5B93CE111D59D0A900BF6041 /* JYRollingView.h */,
+				5B93CE121D59D0A900BF6041 /* JYRollingView.m */,
+			);
+			name = "JYRollingImages    图片轮播";
+			path = JYRollingImages;
+			sourceTree = "<group>";
+		};
 		5B991C431D586CA5000B58C9 /* SMSDK     短信SDK */ = {
 			isa = PBXGroup;
 			children = (
-				5B991C531D588C01000B58C9 /* YZHeaderScaleImage */,
 				5B991C441D586CE2000B58C9 /* SMS_SDK */,
 			);
 			name = "SMSDK     短信SDK";
@@ -673,7 +719,8 @@
 				5B991C541D588C01000B58C9 /* UIScrollView+HeaderScaleImage.h */,
 				5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */,
 			);
-			path = YZHeaderScaleImage;
+			name = YZHeaderScaleImage;
+			path = SMSDK/YZHeaderScaleImage;
 			sourceTree = "<group>";
 		};
 		60AF815046032D36DEFE6B58 /* Pods */ = {
@@ -761,6 +808,8 @@
 		846A76161D5238560017A4AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B93CE011D597B0300BF6041 /* JYMineHeadView.h */,
+				5B93CE021D597B0300BF6041 /* JYMineHeadView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -806,6 +855,8 @@
 		846A761B1D5238560017A4AC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				5B93CE141D59D17700BF6041 /* JYTitleScroller.h */,
+				5B93CE151D59D17700BF6041 /* JYTitleScroller.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -950,6 +1001,7 @@
 				5B8856DB1D4C4E62007C3BAF /* city.plist in Resources */,
 				5B8F69381D4B2EFD008C309B /* Assets.xcassets in Resources */,
 				5B8856CD1D4C476D007C3BAF /* citydata.plist in Resources */,
+				5B93CE0D1D59BCC700BF6041 /* JARoundCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1068,6 +1120,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B991C3F1D582B22000B58C9 /* JYSignOnController.m in Sources */,
+				5B93CE0C1D59BCC700BF6041 /* JARoundCell.m in Sources */,
 				5B8350221D52EC540009634C /* JYProvinceList.m in Sources */,
 				5B83501D1D52EC540009634C /* JYCityChoiceController.m in Sources */,
 				5B8350331D52ECA00009634C /* JYMenuBtn.m in Sources */,
@@ -1079,6 +1132,7 @@
 				5B991C3C1D582505000B58C9 /* JYSignUpOnController.m in Sources */,
 				5B8350321D52ECA00009634C /* JYEjectMenu.m in Sources */,
 				5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */,
+				5B93CE161D59D17700BF6041 /* JYTitleScroller.m in Sources */,
 				5B8856D01D4C4803007C3BAF /* JYLocation.m in Sources */,
 				5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */,
 				5B8481AF1D548E4E0069199A /* JYBackgroundView.m in Sources */,
@@ -1089,14 +1143,18 @@
 				5B8F697D1D4B4DCF008C309B /* JYNSString+Extension.m in Sources */,
 				5B8F69301D4B2EFD008C309B /* AppDelegate.m in Sources */,
 				5B8350311D52ECA00009634C /* JYHomeController.m in Sources */,
+				5B93CE0F1D59BCC700BF6041 /* LXRoundView.m in Sources */,
 				846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */,
 				5B8350441D53281F0009634C /* JYScanBgView.m in Sources */,
 				5B991C421D58345D000B58C9 /* JYSignUpController.m in Sources */,
 				5B8F692D1D4B2EFD008C309B /* main.m in Sources */,
 				5B8350261D52EC540009634C /* JYSearchBarCell.m in Sources */,
+				5B93CE031D597B0300BF6041 /* JYMineHeadView.m in Sources */,
 				5B83503B1D52ED500009634C /* JYScanController.m in Sources */,
 				846A762D1D5239410017A4AC /* JYNewsController.m in Sources */,
+				5B93CE131D59D0A900BF6041 /* JYRollingView.m in Sources */,
 				5B991C591D588C81000B58C9 /* JYMineController.m in Sources */,
+				5B93CE0E1D59BCC700BF6041 /* LXRoundLayout.m in Sources */,
 				5B83501E1D52EC540009634C /* JYAllCity.m in Sources */,
 				846A76241D5239190017A4AC /* JYStudyController.m in Sources */,
 				5B8350431D53281F0009634C /* JYPreviewView.m in Sources */,

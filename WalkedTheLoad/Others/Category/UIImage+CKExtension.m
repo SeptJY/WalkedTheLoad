@@ -169,6 +169,31 @@
     return longExpImg;
 }
 
++ (UIImage *)clipYuanXingImg:(UIImage *)image
+{
+    CGSize size = image.size;
+    
+    //开启位图上下文
+    UIGraphicsBeginImageContextWithOptions(size, NO, 0);
+    
+    //创建圆形路径
+    UIBezierPath *path = [UIBezierPath bezierPathWithOvalInRect:CGRectMake(0, 0, image.size.width, image.size.height)];
+    
+    //设置为裁剪区域
+    [path addClip];
+    
+    //绘制图片
+    [image drawAtPoint:CGPointZero];
+    
+    //获取裁剪后的图片
+    UIImage *mImage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    //关闭上下文
+    UIGraphicsEndImageContext();
+    
+    return mImage;
+}
+
 - (void)imageByCopingImgae:(UIImage *)image
 {
 //    CGRectrect;

@@ -8,8 +8,12 @@
 
 #import "JYMineController.h"
 #import "UIScrollView+HeaderScaleImage.h"
+#import "JYMineHeadView.h"
 
 @interface JYMineController ()
+{
+    JYMineHeadView *_mineHeadView;
+}
 
 @end
 
@@ -23,18 +27,28 @@
     // tableView上面多出来20个像素，是因为自动布局的缘故
     self.edgesForExtendedLayout = UIRectEdgeNone;
     
-    // 设置tableView头部缩放图片
-    self.tableView.yz_headerScaleImage = [UIImage imageNamed:@"mine_define_icon"];
-    
-    // 设置tableView头部视图，必须设置头部视图背景颜色为clearColor,否则会被挡住
-    UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 300)];
-    headerView.backgroundColor = [UIColor yellowColor];
-    self.tableView.tableHeaderView = headerView;
+    _mineHeadView = [JYMineHeadView headView];
+    _mineHeadView.frame = CGRectMake(0, 0, screenW, screenH * 0.5);
+    self.tableView.tableHeaderView = _mineHeadView;
+}
+
+/**
+ * 让当前控制器对应的状态栏是白色
+ */
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//    NSLog(@"aaaaa");
+//    NSLog(@"%@", NSStringFromCGRect(testBtn.frame));
 }
 
 #pragma mark - Table view data source

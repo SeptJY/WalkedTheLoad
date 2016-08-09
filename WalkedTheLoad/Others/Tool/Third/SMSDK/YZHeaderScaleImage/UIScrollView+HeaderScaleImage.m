@@ -204,9 +204,12 @@ static CGFloat const oriImageH = 200;
         
         self.yz_headerImageView.frame = CGRectMake(offsetY, offsetY, self.bounds.size.width - offsetY * 2, self.yz_headerScaleImageHeight - offsetY);
         
+        NSLog(@"< %@", NSStringFromCGRect(self.yz_headerImageView.frame));
+        
     } else {
         
         self.yz_headerImageView.frame = CGRectMake(0, 0, self.bounds.size.width, self.yz_headerScaleImageHeight);
+        NSLog(@"> %@", NSStringFromCGRect(self.yz_headerImageView.frame));
     }
     
 }
