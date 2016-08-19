@@ -42,6 +42,11 @@
     [self setupConstraints];
 }
 
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    self.navigationController.navigationBarHidden = YES;
+//}
+
 /**
  * 让当前控制器对应的状态栏是白色
  */

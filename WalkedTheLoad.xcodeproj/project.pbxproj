@@ -41,13 +41,11 @@
 		5B8F697D1D4B4DCF008C309B /* JYNSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F69781D4B4DCF008C309B /* JYNSString+Extension.m */; };
 		5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697A1D4B4DCF008C309B /* UIImage+CKExtension.m */; };
 		5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */; };
-		5B93CE031D597B0300BF6041 /* JYMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE021D597B0300BF6041 /* JYMineHeadView.m */; };
 		5B93CE0C1D59BCC700BF6041 /* JARoundCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE061D59BCC700BF6041 /* JARoundCell.m */; };
 		5B93CE0D1D59BCC700BF6041 /* JARoundCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B93CE071D59BCC700BF6041 /* JARoundCell.xib */; };
 		5B93CE0E1D59BCC700BF6041 /* LXRoundLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE091D59BCC700BF6041 /* LXRoundLayout.m */; };
 		5B93CE0F1D59BCC700BF6041 /* LXRoundView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE0B1D59BCC700BF6041 /* LXRoundView.m */; };
 		5B93CE131D59D0A900BF6041 /* JYRollingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE121D59D0A900BF6041 /* JYRollingView.m */; };
-		5B93CE161D59D17700BF6041 /* JYTitleScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B93CE151D59D17700BF6041 /* JYTitleScroller.m */; };
 		5B991C371D5814F7000B58C9 /* JYContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C361D5814F7000B58C9 /* JYContentView.m */; };
 		5B991C391D581511000B58C9 /* JYContentView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B991C381D581511000B58C9 /* JYContentView.xib */; };
 		5B991C3C1D582505000B58C9 /* JYSignUpOnController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C3B1D582505000B58C9 /* JYSignUpOnController.m */; };
@@ -62,6 +60,15 @@
 		5B991C521D586D53000B58C9 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C511D586D53000B58C9 /* libstdc++.tbd */; };
 		5B991C561D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */; };
 		5B991C591D588C81000B58C9 /* JYMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C581D588C81000B58C9 /* JYMineController.m */; };
+		5B9ABC631D5C154E00970571 /* JYShowErWeiCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */; };
+		5B9ABC661D5C264900970571 /* JYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ABC651D5C264900970571 /* JYViewController.m */; };
+		5B9F331D1D669FDF00CAEDAD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F331C1D669FDF00CAEDAD /* libWeChatSDK.a */; };
+		5B9F331F1D66A01600CAEDAD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F331E1D66A01600CAEDAD /* SystemConfiguration.framework */; };
+		5B9F33211D66A02700CAEDAD /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F33201D66A02700CAEDAD /* libsqlite3.0.tbd */; };
+		5B9F33231D66A03100CAEDAD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F33221D66A03100CAEDAD /* libc++.tbd */; };
+		5BAC83001D5B14B30038A454 /* JYTitleScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC82FF1D5B14B30038A454 /* JYTitleScroller.m */; };
+		5BAC83051D5B14FD0038A454 /* JYMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */; };
+		5BAC83081D5B15180038A454 /* JYMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83071D5B15180038A454 /* JYMineCell.m */; };
 		6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */; };
 		846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A760D1D5237990017A4AC /* JYTabBarController.m */; };
 		846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A761D1D5238F40017A4AC /* JYLifeController.m */; };
@@ -159,8 +166,6 @@
 		5B8F697B1D4B4DCF008C309B /* UIView+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extension.h"; sourceTree = "<group>"; };
 		5B8F697C1D4B4DCF008C309B /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		5B8F69831D4B5ADE008C309B /* JYNotes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JYNotes.h; sourceTree = "<group>"; };
-		5B93CE011D597B0300BF6041 /* JYMineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYMineHeadView.h; path = WalkedTheLoad/Studys/Mine/Controller/JYMineHeadView.h; sourceTree = SOURCE_ROOT; };
-		5B93CE021D597B0300BF6041 /* JYMineHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYMineHeadView.m; path = WalkedTheLoad/Studys/Mine/Controller/JYMineHeadView.m; sourceTree = SOURCE_ROOT; };
 		5B93CE051D59BCC700BF6041 /* JARoundCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JARoundCell.h; sourceTree = "<group>"; };
 		5B93CE061D59BCC700BF6041 /* JARoundCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JARoundCell.m; sourceTree = "<group>"; };
 		5B93CE071D59BCC700BF6041 /* JARoundCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JARoundCell.xib; sourceTree = "<group>"; };
@@ -170,8 +175,6 @@
 		5B93CE0B1D59BCC700BF6041 /* LXRoundView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRoundView.m; sourceTree = "<group>"; };
 		5B93CE111D59D0A900BF6041 /* JYRollingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYRollingView.h; sourceTree = "<group>"; };
 		5B93CE121D59D0A900BF6041 /* JYRollingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYRollingView.m; sourceTree = "<group>"; };
-		5B93CE141D59D17700BF6041 /* JYTitleScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JYTitleScroller.h; path = WalkedTheLoad/Studys/Mine/Controller/JYTitleScroller.h; sourceTree = SOURCE_ROOT; };
-		5B93CE151D59D17700BF6041 /* JYTitleScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JYTitleScroller.m; path = WalkedTheLoad/Studys/Mine/Controller/JYTitleScroller.m; sourceTree = SOURCE_ROOT; };
 		5B991C351D5814F7000B58C9 /* JYContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYContentView.h; sourceTree = "<group>"; };
 		5B991C361D5814F7000B58C9 /* JYContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYContentView.m; sourceTree = "<group>"; };
 		5B991C381D581511000B58C9 /* JYContentView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYContentView.xib; sourceTree = "<group>"; };
@@ -192,6 +195,22 @@
 		5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HeaderScaleImage.m"; sourceTree = "<group>"; };
 		5B991C571D588C81000B58C9 /* JYMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineController.h; sourceTree = "<group>"; };
 		5B991C581D588C81000B58C9 /* JYMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineController.m; sourceTree = "<group>"; };
+		5B9ABC611D5C154D00970571 /* JYShowErWeiCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYShowErWeiCode.h; sourceTree = "<group>"; };
+		5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYShowErWeiCode.m; sourceTree = "<group>"; };
+		5B9ABC641D5C264900970571 /* JYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYViewController.h; sourceTree = "<group>"; };
+		5B9ABC651D5C264900970571 /* JYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYViewController.m; sourceTree = "<group>"; };
+		5B9F331A1D669FDF00CAEDAD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		5B9F331B1D669FDF00CAEDAD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+		5B9F331C1D669FDF00CAEDAD /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		5B9F331E1D66A01600CAEDAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5B9F33201D66A02700CAEDAD /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		5B9F33221D66A03100CAEDAD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5BAC82FE1D5B14B30038A454 /* JYTitleScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTitleScroller.h; sourceTree = "<group>"; };
+		5BAC82FF1D5B14B30038A454 /* JYTitleScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTitleScroller.m; sourceTree = "<group>"; };
+		5BAC83031D5B14FD0038A454 /* JYMineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineHeadView.h; sourceTree = "<group>"; };
+		5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineHeadView.m; sourceTree = "<group>"; };
+		5BAC83061D5B15180038A454 /* JYMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineCell.h; sourceTree = "<group>"; };
+		5BAC83071D5B15180038A454 /* JYMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineCell.m; sourceTree = "<group>"; };
 		846A760C1D5237990017A4AC /* JYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTabBarController.h; sourceTree = "<group>"; };
 		846A760D1D5237990017A4AC /* JYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTabBarController.m; sourceTree = "<group>"; };
 		846A761C1D5238F40017A4AC /* JYLifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLifeController.h; sourceTree = "<group>"; };
@@ -209,8 +228,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B9F33231D66A03100CAEDAD /* libc++.tbd in Frameworks */,
+				5B9F33211D66A02700CAEDAD /* libsqlite3.0.tbd in Frameworks */,
+				5B9F331F1D66A01600CAEDAD /* SystemConfiguration.framework in Frameworks */,
 				5B991C521D586D53000B58C9 /* libstdc++.tbd in Frameworks */,
 				5B991C501D586D4B000B58C9 /* JavaScriptCore.framework in Frameworks */,
+				5B9F331D1D669FDF00CAEDAD /* libWeChatSDK.a in Frameworks */,
 				5B991C4E1D586D41000B58C9 /* MessageUI.framework in Frameworks */,
 				5B991C4C1D586D38000B58C9 /* libicucore.tbd in Frameworks */,
 				5B991C4A1D586D2D000B58C9 /* libz.tbd in Frameworks */,
@@ -241,6 +264,9 @@
 		400186E56CFD7A598D1D7DCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B9F33221D66A03100CAEDAD /* libc++.tbd */,
+				5B9F33201D66A02700CAEDAD /* libsqlite3.0.tbd */,
+				5B9F331E1D66A01600CAEDAD /* SystemConfiguration.framework */,
 				5B991C511D586D53000B58C9 /* libstdc++.tbd */,
 				5B991C4F1D586D4B000B58C9 /* JavaScriptCore.framework */,
 				5B991C4D1D586D41000B58C9 /* MessageUI.framework */,
@@ -275,6 +301,7 @@
 		5B834FF91D52EA930009634C /* Third      第三方工具 */ = {
 			isa = PBXGroup;
 			children = (
+				5B9F33191D669FD400CAEDAD /* WXSDK */,
 				5B93CE041D59BCC700BF6041 /* RoundItem */,
 				5B991C531D588C01000B58C9 /* YZHeaderScaleImage */,
 				5B991C431D586CA5000B58C9 /* SMSDK     短信SDK */,
@@ -723,6 +750,54 @@
 			path = SMSDK/YZHeaderScaleImage;
 			sourceTree = "<group>";
 		};
+		5B9F33191D669FD400CAEDAD /* WXSDK */ = {
+			isa = PBXGroup;
+			children = (
+				5B9F331A1D669FDF00CAEDAD /* WXApi.h */,
+				5B9F331B1D669FDF00CAEDAD /* WXApiObject.h */,
+				5B9F331C1D669FDF00CAEDAD /* libWeChatSDK.a */,
+			);
+			path = WXSDK;
+			sourceTree = "<group>";
+		};
+		5BAC82F91D5B14980038A454 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BAC82FA1D5B14980038A454 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BAC82FE1D5B14B30038A454 /* JYTitleScroller.h */,
+				5BAC82FF1D5B14B30038A454 /* JYTitleScroller.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5BAC83011D5B14F10038A454 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BAC83021D5B14F10038A454 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BAC83031D5B14FD0038A454 /* JYMineHeadView.h */,
+				5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */,
+				5BAC83061D5B15180038A454 /* JYMineCell.h */,
+				5BAC83071D5B15180038A454 /* JYMineCell.m */,
+				5B9ABC611D5C154D00970571 /* JYShowErWeiCode.h */,
+				5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */,
+				5B9ABC641D5C264900970571 /* JYViewController.h */,
+				5B9ABC651D5C264900970571 /* JYViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		60AF815046032D36DEFE6B58 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -781,9 +856,9 @@
 		846A76131D5238560017A4AC /* Mine   我的 */ = {
 			isa = PBXGroup;
 			children = (
+				5BAC83011D5B14F10038A454 /* Model */,
+				5BAC83021D5B14F10038A454 /* View */,
 				846A76141D5238560017A4AC /* Controller */,
-				846A76151D5238560017A4AC /* Model */,
-				846A76161D5238560017A4AC /* View */,
 			);
 			name = "Mine   我的";
 			path = Mine;
@@ -796,22 +871,6 @@
 				5B991C581D588C81000B58C9 /* JYMineController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		846A76151D5238560017A4AC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		846A76161D5238560017A4AC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5B93CE011D597B0300BF6041 /* JYMineHeadView.h */,
-				5B93CE021D597B0300BF6041 /* JYMineHeadView.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		846A76171D5238560017A4AC /* News    每天新鲜事 */ = {
@@ -828,9 +887,9 @@
 		846A76181D5238560017A4AC /* Study   学习 */ = {
 			isa = PBXGroup;
 			children = (
+				5BAC82F91D5B14980038A454 /* Model */,
+				5BAC82FA1D5B14980038A454 /* View */,
 				846A76191D5238560017A4AC /* Controller */,
-				846A761A1D5238560017A4AC /* Model */,
-				846A761B1D5238560017A4AC /* View */,
 			);
 			name = "Study   学习";
 			path = Study;
@@ -843,22 +902,6 @@
 				846A76231D5239190017A4AC /* JYStudyController.m */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		846A761A1D5238560017A4AC /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		846A761B1D5238560017A4AC /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5B93CE141D59D17700BF6041 /* JYTitleScroller.h */,
-				5B93CE151D59D17700BF6041 /* JYTitleScroller.m */,
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		846A76251D52392F0017A4AC /* Controller */ = {
@@ -1120,9 +1163,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B991C3F1D582B22000B58C9 /* JYSignOnController.m in Sources */,
+				5B9ABC661D5C264900970571 /* JYViewController.m in Sources */,
 				5B93CE0C1D59BCC700BF6041 /* JARoundCell.m in Sources */,
 				5B8350221D52EC540009634C /* JYProvinceList.m in Sources */,
 				5B83501D1D52EC540009634C /* JYCityChoiceController.m in Sources */,
+				5BAC83051D5B14FD0038A454 /* JYMineHeadView.m in Sources */,
 				5B8350331D52ECA00009634C /* JYMenuBtn.m in Sources */,
 				5B83501F1D52EC540009634C /* JYArealist.m in Sources */,
 				5B991C561D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m in Sources */,
@@ -1132,10 +1177,11 @@
 				5B991C3C1D582505000B58C9 /* JYSignUpOnController.m in Sources */,
 				5B8350321D52ECA00009634C /* JYEjectMenu.m in Sources */,
 				5B8F697F1D4B4DCF008C309B /* UIView+Extension.m in Sources */,
-				5B93CE161D59D17700BF6041 /* JYTitleScroller.m in Sources */,
+				5BAC83001D5B14B30038A454 /* JYTitleScroller.m in Sources */,
 				5B8856D01D4C4803007C3BAF /* JYLocation.m in Sources */,
 				5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */,
 				5B8481AF1D548E4E0069199A /* JYBackgroundView.m in Sources */,
+				5BAC83081D5B15180038A454 /* JYMineCell.m in Sources */,
 				5B991C371D5814F7000B58C9 /* JYContentView.m in Sources */,
 				5B83503E1D53163B0009634C /* JYNavigationController.m in Sources */,
 				5B8350231D52EC540009634C /* JYCityShowCell.m in Sources */,
@@ -1149,7 +1195,6 @@
 				5B991C421D58345D000B58C9 /* JYSignUpController.m in Sources */,
 				5B8F692D1D4B2EFD008C309B /* main.m in Sources */,
 				5B8350261D52EC540009634C /* JYSearchBarCell.m in Sources */,
-				5B93CE031D597B0300BF6041 /* JYMineHeadView.m in Sources */,
 				5B83503B1D52ED500009634C /* JYScanController.m in Sources */,
 				846A762D1D5239410017A4AC /* JYNewsController.m in Sources */,
 				5B93CE131D59D0A900BF6041 /* JYRollingView.m in Sources */,
@@ -1161,6 +1206,7 @@
 				5B8350201D52EC540009634C /* JYCityData.m in Sources */,
 				846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */,
 				5B8350241D52EC540009634C /* JYHotCityCell.m in Sources */,
+				5B9ABC631D5C154E00970571 /* JYShowErWeiCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1303,10 +1349,14 @@
 					"$(PROJECT_DIR)/WalkedTheLoad/Others/Tool/Third/SMSDK/SMS_SDK",
 				);
 				GCC_PREFIX_HEADER = WalkedTheLoad/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "/Users/ourongxing/Desktop/练习/WalkedTheLoad/WalkedTheLoad/Others/Tool/Third/WXSDK";
 				INFOPLIST_FILE = WalkedTheLoad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WalkedTheLoad/Others/Tool/Third/WXSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.2wei.WalkedTheLoad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1326,10 +1376,14 @@
 					"$(PROJECT_DIR)/WalkedTheLoad/Others/Tool/Third/SMSDK/SMS_SDK",
 				);
 				GCC_PREFIX_HEADER = WalkedTheLoad/PrefixHeader.pch;
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "/Users/ourongxing/Desktop/练习/WalkedTheLoad/WalkedTheLoad/Others/Tool/Third/WXSDK";
 				INFOPLIST_FILE = WalkedTheLoad/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/WalkedTheLoad/Others/Tool/Third/WXSDK",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.2wei.WalkedTheLoad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";

@@ -9,11 +9,17 @@
 #import "JYMineController.h"
 #import "UIScrollView+HeaderScaleImage.h"
 #import "JYMineHeadView.h"
+#import "JYMineCell.h"
+#import "JYShowErWeiCode.h"
 
 @interface JYMineController ()
 {
     JYMineHeadView *_mineHeadView;
+    NSArray *_titleArray;
+    NSArray *_imgArray;
 }
+
+@property (strong, nonatomic) UIView *cardView;
 
 @end
 
@@ -30,6 +36,11 @@
     _mineHeadView = [JYMineHeadView headView];
     _mineHeadView.frame = CGRectMake(0, 0, screenW, screenH * 0.5);
     self.tableView.tableHeaderView = _mineHeadView;
+    [self.tableView registerClass:[JYMineCell class] forCellReuseIdentifier:@"mine"];
+    
+    _titleArray = @[@"我的名片", @"联系方式", @"学习历程", @"工作经验", @"完善资料", @"设置"];
+    
+    _imgArray = @[@"mine_erWeiCode_icon", @"mine_lianXiFangShi_icon", @"mine_erWeiCode_icon", @"mine_lianXiFangShi_icon", @"mine_erWeiCode_icon", @"mine_lianXiFangShi_icon"];
 }
 
 /**
@@ -51,70 +62,62 @@
 //    NSLog(@"%@", NSStringFromCGRect(testBtn.frame));
 }
 
+- (UIView *)cardView
+{
+    if (!_cardView) {
+        
+        _cardView = [[UIView alloc] init];
+        
+        _cardView.backgroundColor = [UIColor cyanColor];
+        
+//        [self.view addSubview:_cardView];
+        
+//        __weak JYMineController *weakSelf = self;
+//        [_cardView mas_makeConstraints:^(MASConstraintMaker *make) {
+//            make.leading.equalTo(weakSelf.view).offset(50);
+//            make.trailing.equalTo(weakSelf.view).offset(-50);
+//            make.centerX.centerY.equalTo(weakSelf.view);
+//            make.height.mas_equalTo((screenW - 100) * 16 / 9);
+//        }];
+    }
+    return _cardView;
+}
+
 #pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
-}
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return _titleArray.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
+    JYMineCell *cell = [JYMineCell cellWithTableView:tableView];
+    cell.imageView.image = [UIImage imageNamed:_imgArray[indexPath.row]];
+    
+    cell.textLabel.text = _titleArray[indexPath.row];
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    switch (indexPath.row) {
+        case 0:
+        {
+            [JYShowErWeiCode sharedInstance].shadeBgColor = ShadeBackgroundSolid;
+            [JYShowErWeiCode sharedInstance].position = JYBtnPositionRight;
+            [[JYShowErWeiCode sharedInstance] showWithPresentView:self.cardView animated:YES];
+        }
+            break;
+            
+        default:
+            break;
+    }
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+- (void)viewWillLayoutSubviews
+{
+    self.cardView.frame = CGRectMake(50, (screenH - ((screenW - 100) * 16 / 9)) * 0.5, screenW - 100, (screenW - 100) * 16 / 9);
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
