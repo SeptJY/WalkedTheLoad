@@ -9,13 +9,17 @@
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
 #import <SMS_SDK/SMSSDK.h>
+#import "WXApi.h"
 
 #import "JYTabBarController.h"
 
 #define SMAppKey @"b9f5d1711f90"
 #define SMAppSecret @"2ff7f66b22c1626a32fe2b257521eb9a"
 
-@interface AppDelegate () <CLLocationManagerDelegate>
+#define WXAppKey @"wxaddfcb7af42a6202"
+#define WXAppSecret @"71066d6236366c747ba1b892e97462fe"
+
+@interface AppDelegate () <CLLocationManagerDelegate, WXApiDelegate>
 {
     //定位
     CLLocation *_checkLocation;//用于保存位置信息
@@ -31,8 +35,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //初始化应用，appKey和appSecret从后台申请得
-    [SMSSDK registerApp:SMAppKey
-             withSecret:SMAppSecret];
+//    [SMSSDK registerApp:SMAppKey
+//             withSecret:SMAppSecret];
+    
+    // 微信注册
+    //向微信注册应用。
+    [WXApi registerApp:WXAppKey withDescription:@"wechat"];
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -123,6 +131,28 @@
     } else {
        return str;
     }
+}
+
+// 重写AppDelegate的handleOpenURLd和openURL方法
+- (BOOL)application:(UIApplication *)application handleOpenURL:(nonnull NSURL *)url
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+- (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(nonnull id)annotation
+{
+    return [WXApi handleOpenURL:url delegate:self];
+}
+
+// 通过实现WXApiDelegate协议的两个方法来和微信终端交互的具体请求与回应
+- (void)onReq:(BaseReq *)req
+{
+    
+}
+
+-(void) onResp:(BaseResp*)resp
+{
+    
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
