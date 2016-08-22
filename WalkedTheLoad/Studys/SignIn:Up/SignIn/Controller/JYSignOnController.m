@@ -8,11 +8,6 @@
 
 #import "JYSignOnController.h"
 #import "JYSignUpController.h"
-#import "WXApi.h"
-
-
-#define WXAppSecret @"71066d6236366c747ba1b892e97462fe"
-#define WXAppKey @"wxaddfcb7af42a6202"
 
 @interface JYSignOnController ()
 
@@ -273,17 +268,6 @@
     switch (btn.tag) {
         case 10:
             JYLog(@"微信登录");
-        {
-            //构造SendAuthReq结构体
-            SendAuthReq* req =[[SendAuthReq alloc ] init];
-            req.scope = @"snsapi_userinfo";
-//            req.openID = WXAppKey;
-            req.state = @"1245";
-//            appdelegate = [UIApplication sharedApplication].delegate;
-//            appdelegate.wxDelegate = self;
-            //第三方向微信终端发送一个SendAuthReq消息结构
-            [WXApi sendReq:req];
-        }
             break;
         case 11:
         {

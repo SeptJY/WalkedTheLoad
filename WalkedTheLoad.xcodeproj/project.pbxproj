@@ -62,14 +62,13 @@
 		5B991C591D588C81000B58C9 /* JYMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C581D588C81000B58C9 /* JYMineController.m */; };
 		5B9ABC631D5C154E00970571 /* JYShowErWeiCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */; };
 		5B9ABC661D5C264900970571 /* JYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ABC651D5C264900970571 /* JYViewController.m */; };
-		5B9F331D1D669FDF00CAEDAD /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F331C1D669FDF00CAEDAD /* libWeChatSDK.a */; };
 		5B9F331F1D66A01600CAEDAD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F331E1D66A01600CAEDAD /* SystemConfiguration.framework */; };
 		5B9F33211D66A02700CAEDAD /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F33201D66A02700CAEDAD /* libsqlite3.0.tbd */; };
 		5B9F33231D66A03100CAEDAD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F33221D66A03100CAEDAD /* libc++.tbd */; };
 		5BAC83001D5B14B30038A454 /* JYTitleScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC82FF1D5B14B30038A454 /* JYTitleScroller.m */; };
 		5BAC83051D5B14FD0038A454 /* JYMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */; };
 		5BAC83081D5B15180038A454 /* JYMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83071D5B15180038A454 /* JYMineCell.m */; };
-		5BD5DB0D1D6AEABB00A2988E /* JYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD5DB0C1D6AEABB00A2988E /* JYViewController.m */; };
+		5BD5DB101D6AED8E00A2988E /* JYShowErWeiCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD5DB0F1D6AED8E00A2988E /* JYShowErWeiCodeView.m */; };
 		6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */; };
 		846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A760D1D5237990017A4AC /* JYTabBarController.m */; };
 		846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A761D1D5238F40017A4AC /* JYLifeController.m */; };
@@ -200,9 +199,6 @@
 		5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYShowErWeiCode.m; sourceTree = "<group>"; };
 		5B9ABC641D5C264900970571 /* JYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYViewController.h; sourceTree = "<group>"; };
 		5B9ABC651D5C264900970571 /* JYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYViewController.m; sourceTree = "<group>"; };
-		5B9F331A1D669FDF00CAEDAD /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
-		5B9F331B1D669FDF00CAEDAD /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		5B9F331C1D669FDF00CAEDAD /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		5B9F331E1D66A01600CAEDAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5B9F33201D66A02700CAEDAD /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		5B9F33221D66A03100CAEDAD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
@@ -212,8 +208,8 @@
 		5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineHeadView.m; sourceTree = "<group>"; };
 		5BAC83061D5B15180038A454 /* JYMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineCell.h; sourceTree = "<group>"; };
 		5BAC83071D5B15180038A454 /* JYMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineCell.m; sourceTree = "<group>"; };
-		5BD5DB0B1D6AEABB00A2988E /* JYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYViewController.h; sourceTree = "<group>"; };
-		5BD5DB0C1D6AEABB00A2988E /* JYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYViewController.m; sourceTree = "<group>"; };
+		5BD5DB0E1D6AED8E00A2988E /* JYShowErWeiCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYShowErWeiCodeView.h; sourceTree = "<group>"; };
+		5BD5DB0F1D6AED8E00A2988E /* JYShowErWeiCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYShowErWeiCodeView.m; sourceTree = "<group>"; };
 		846A760C1D5237990017A4AC /* JYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTabBarController.h; sourceTree = "<group>"; };
 		846A760D1D5237990017A4AC /* JYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTabBarController.m; sourceTree = "<group>"; };
 		846A761C1D5238F40017A4AC /* JYLifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLifeController.h; sourceTree = "<group>"; };
@@ -236,7 +232,6 @@
 				5B9F331F1D66A01600CAEDAD /* SystemConfiguration.framework in Frameworks */,
 				5B991C521D586D53000B58C9 /* libstdc++.tbd in Frameworks */,
 				5B991C501D586D4B000B58C9 /* JavaScriptCore.framework in Frameworks */,
-				5B9F331D1D669FDF00CAEDAD /* libWeChatSDK.a in Frameworks */,
 				5B991C4E1D586D41000B58C9 /* MessageUI.framework in Frameworks */,
 				5B991C4C1D586D38000B58C9 /* libicucore.tbd in Frameworks */,
 				5B991C4A1D586D2D000B58C9 /* libz.tbd in Frameworks */,
@@ -304,7 +299,6 @@
 		5B834FF91D52EA930009634C /* Third      第三方工具 */ = {
 			isa = PBXGroup;
 			children = (
-				5B9F33191D669FD400CAEDAD /* WXSDK */,
 				5B93CE041D59BCC700BF6041 /* RoundItem */,
 				5B991C531D588C01000B58C9 /* YZHeaderScaleImage */,
 				5B991C431D586CA5000B58C9 /* SMSDK     短信SDK */,
@@ -556,8 +550,6 @@
 				5B8F69621D4B30E8008C309B /* Sources   资源 */,
 				5B8F69731D4B4DBF008C309B /* Others */,
 				5B8F692B1D4B2EFD008C309B /* Supporting Files */,
-				5BD5DB0B1D6AEABB00A2988E /* JYViewController.h */,
-				5BD5DB0C1D6AEABB00A2988E /* JYViewController.m */,
 			);
 			path = WalkedTheLoad;
 			sourceTree = "<group>";
@@ -755,16 +747,6 @@
 			path = SMSDK/YZHeaderScaleImage;
 			sourceTree = "<group>";
 		};
-		5B9F33191D669FD400CAEDAD /* WXSDK */ = {
-			isa = PBXGroup;
-			children = (
-				5B9F331A1D669FDF00CAEDAD /* WXApi.h */,
-				5B9F331B1D669FDF00CAEDAD /* WXApiObject.h */,
-				5B9F331C1D669FDF00CAEDAD /* libWeChatSDK.a */,
-			);
-			path = WXSDK;
-			sourceTree = "<group>";
-		};
 		5BAC82F91D5B14980038A454 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -799,6 +781,8 @@
 				5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */,
 				5B9ABC641D5C264900970571 /* JYViewController.h */,
 				5B9ABC651D5C264900970571 /* JYViewController.m */,
+				5BD5DB0E1D6AED8E00A2988E /* JYShowErWeiCodeView.h */,
+				5BD5DB0F1D6AED8E00A2988E /* JYShowErWeiCodeView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1195,6 +1179,7 @@
 				5B8F69301D4B2EFD008C309B /* AppDelegate.m in Sources */,
 				5B8350311D52ECA00009634C /* JYHomeController.m in Sources */,
 				5B93CE0F1D59BCC700BF6041 /* LXRoundView.m in Sources */,
+				5BD5DB101D6AED8E00A2988E /* JYShowErWeiCodeView.m in Sources */,
 				846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */,
 				5B8350441D53281F0009634C /* JYScanBgView.m in Sources */,
 				5B991C421D58345D000B58C9 /* JYSignUpController.m in Sources */,
@@ -1204,7 +1189,6 @@
 				846A762D1D5239410017A4AC /* JYNewsController.m in Sources */,
 				5B93CE131D59D0A900BF6041 /* JYRollingView.m in Sources */,
 				5B991C591D588C81000B58C9 /* JYMineController.m in Sources */,
-				5BD5DB0D1D6AEABB00A2988E /* JYViewController.m in Sources */,
 				5B93CE0E1D59BCC700BF6041 /* LXRoundLayout.m in Sources */,
 				5B83501E1D52EC540009634C /* JYAllCity.m in Sources */,
 				846A76241D5239190017A4AC /* JYStudyController.m in Sources */,

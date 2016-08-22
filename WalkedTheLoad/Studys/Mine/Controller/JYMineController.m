@@ -11,6 +11,7 @@
 #import "JYMineHeadView.h"
 #import "JYMineCell.h"
 #import "JYShowErWeiCode.h"
+#import "JYShowErWeiCodeView.h"
 
 @interface JYMineController ()
 {
@@ -20,6 +21,8 @@
 }
 
 @property (strong, nonatomic) UIView *cardView;
+
+@property (strong, nonatomic) JYShowErWeiCodeView *showView;
 
 @end
 
@@ -83,6 +86,18 @@
     return _cardView;
 }
 
+- (JYShowErWeiCodeView *)showView
+{
+    if (!_showView) {
+        
+        _showView = [[JYShowErWeiCodeView alloc] init];
+        _showView.hidden = YES;
+        
+        [self.view addSubview:_showView];
+    }
+    return _showView;
+}
+
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return _titleArray.count;
@@ -104,9 +119,11 @@
     switch (indexPath.row) {
         case 0:
         {
-            [JYShowErWeiCode sharedInstance].shadeBgColor = ShadeBackgroundSolid;
-            [JYShowErWeiCode sharedInstance].position = JYBtnPositionRight;
-            [[JYShowErWeiCode sharedInstance] showWithPresentView:self.cardView animated:YES];
+//            [JYShowErWeiCode sharedInstance].shadeBgColor = ShadeBackgroundSolid;
+//            [JYShowErWeiCode sharedInstance].position = JYBtnPositionRight;
+//            [[JYShowErWeiCode sharedInstance] showWithPresentView:self.cardView animated:YES];
+//            self.showView.hidden = NO;
+            [self.showView startAnimation];
         }
             break;
             
@@ -117,7 +134,9 @@
 
 - (void)viewWillLayoutSubviews
 {
-    self.cardView.frame = CGRectMake(50, (screenH - ((screenW - 100) * 16 / 9)) * 0.5, screenW - 100, (screenW - 100) * 16 / 9);
+//    self.cardView.frame = CGRectMake(50, (screenH - ((screenW - 100) * 16 / 9)) * 0.5, screenW - 100, (screenW - 100) * 16 / 9);
+    
+    self.showView.frame = self.view.bounds;
 }
 
 @end
