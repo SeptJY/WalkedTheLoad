@@ -69,6 +69,7 @@
 		5BAC83001D5B14B30038A454 /* JYTitleScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC82FF1D5B14B30038A454 /* JYTitleScroller.m */; };
 		5BAC83051D5B14FD0038A454 /* JYMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */; };
 		5BAC83081D5B15180038A454 /* JYMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83071D5B15180038A454 /* JYMineCell.m */; };
+		5BD5DB0D1D6AEABB00A2988E /* JYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BD5DB0C1D6AEABB00A2988E /* JYViewController.m */; };
 		6A695E063E9882AE5C9AB516 /* libPods-WalkedTheLoadTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D91E430B43D0EF0CF9B769D6 /* libPods-WalkedTheLoadTests.a */; };
 		846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A760D1D5237990017A4AC /* JYTabBarController.m */; };
 		846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 846A761D1D5238F40017A4AC /* JYLifeController.m */; };
@@ -211,6 +212,8 @@
 		5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineHeadView.m; sourceTree = "<group>"; };
 		5BAC83061D5B15180038A454 /* JYMineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineCell.h; sourceTree = "<group>"; };
 		5BAC83071D5B15180038A454 /* JYMineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineCell.m; sourceTree = "<group>"; };
+		5BD5DB0B1D6AEABB00A2988E /* JYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYViewController.h; sourceTree = "<group>"; };
+		5BD5DB0C1D6AEABB00A2988E /* JYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYViewController.m; sourceTree = "<group>"; };
 		846A760C1D5237990017A4AC /* JYTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTabBarController.h; sourceTree = "<group>"; };
 		846A760D1D5237990017A4AC /* JYTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTabBarController.m; sourceTree = "<group>"; };
 		846A761C1D5238F40017A4AC /* JYLifeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYLifeController.h; sourceTree = "<group>"; };
@@ -553,6 +556,8 @@
 				5B8F69621D4B30E8008C309B /* Sources   资源 */,
 				5B8F69731D4B4DBF008C309B /* Others */,
 				5B8F692B1D4B2EFD008C309B /* Supporting Files */,
+				5BD5DB0B1D6AEABB00A2988E /* JYViewController.h */,
+				5BD5DB0C1D6AEABB00A2988E /* JYViewController.m */,
 			);
 			path = WalkedTheLoad;
 			sourceTree = "<group>";
@@ -1199,6 +1204,7 @@
 				846A762D1D5239410017A4AC /* JYNewsController.m in Sources */,
 				5B93CE131D59D0A900BF6041 /* JYRollingView.m in Sources */,
 				5B991C591D588C81000B58C9 /* JYMineController.m in Sources */,
+				5BD5DB0D1D6AEABB00A2988E /* JYViewController.m in Sources */,
 				5B93CE0E1D59BCC700BF6041 /* LXRoundLayout.m in Sources */,
 				5B83501E1D52EC540009634C /* JYAllCity.m in Sources */,
 				846A76241D5239190017A4AC /* JYStudyController.m in Sources */,
