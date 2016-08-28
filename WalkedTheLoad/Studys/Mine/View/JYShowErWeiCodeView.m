@@ -143,9 +143,7 @@ static NSTimeInterval const kTransformPart2AnimationDuration = 0.4;
     if (!_codeImgView) {
         
         _codeImgView = [[UIImageView alloc] init];
-        _codeImgView.backgroundColor = [UIColor cyanColor];
-        
-    
+        _codeImgView.image = [UIImage logoErWeiCode:@"aaa" logoImage:@"logo_icon"];
     }
     return _codeImgView;
 }

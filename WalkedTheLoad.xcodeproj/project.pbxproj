@@ -60,11 +60,14 @@
 		5B991C521D586D53000B58C9 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B991C511D586D53000B58C9 /* libstdc++.tbd */; };
 		5B991C561D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */; };
 		5B991C591D588C81000B58C9 /* JYMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B991C581D588C81000B58C9 /* JYMineController.m */; };
-		5B9ABC631D5C154E00970571 /* JYShowErWeiCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */; };
-		5B9ABC661D5C264900970571 /* JYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B9ABC651D5C264900970571 /* JYViewController.m */; };
 		5B9F331F1D66A01600CAEDAD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F331E1D66A01600CAEDAD /* SystemConfiguration.framework */; };
 		5B9F33211D66A02700CAEDAD /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F33201D66A02700CAEDAD /* libsqlite3.0.tbd */; };
 		5B9F33231D66A03100CAEDAD /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9F33221D66A03100CAEDAD /* libc++.tbd */; };
+		5BA05DC01D6BF2D000D5BC8B /* JYEducationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA05DB71D6BF2D000D5BC8B /* JYEducationController.m */; };
+		5BA05DC11D6BF2D000D5BC8B /* Education.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5BA05DB91D6BF2D000D5BC8B /* Education.plist */; };
+		5BA05DC21D6BF2D000D5BC8B /* JYEducation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA05DBB1D6BF2D000D5BC8B /* JYEducation.m */; };
+		5BA05DC31D6BF2D000D5BC8B /* JYEducationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BA05DBE1D6BF2D000D5BC8B /* JYEducationCell.m */; };
+		5BA05DC41D6BF2D000D5BC8B /* JYEducationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA05DBF1D6BF2D000D5BC8B /* JYEducationCell.xib */; };
 		5BAC83001D5B14B30038A454 /* JYTitleScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC82FF1D5B14B30038A454 /* JYTitleScroller.m */; };
 		5BAC83051D5B14FD0038A454 /* JYMineHeadView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */; };
 		5BAC83081D5B15180038A454 /* JYMineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BAC83071D5B15180038A454 /* JYMineCell.m */; };
@@ -195,13 +198,17 @@
 		5B991C551D588C01000B58C9 /* UIScrollView+HeaderScaleImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HeaderScaleImage.m"; sourceTree = "<group>"; };
 		5B991C571D588C81000B58C9 /* JYMineController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineController.h; sourceTree = "<group>"; };
 		5B991C581D588C81000B58C9 /* JYMineController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMineController.m; sourceTree = "<group>"; };
-		5B9ABC611D5C154D00970571 /* JYShowErWeiCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYShowErWeiCode.h; sourceTree = "<group>"; };
-		5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYShowErWeiCode.m; sourceTree = "<group>"; };
-		5B9ABC641D5C264900970571 /* JYViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYViewController.h; sourceTree = "<group>"; };
-		5B9ABC651D5C264900970571 /* JYViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYViewController.m; sourceTree = "<group>"; };
 		5B9F331E1D66A01600CAEDAD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5B9F33201D66A02700CAEDAD /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
 		5B9F33221D66A03100CAEDAD /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		5BA05DB61D6BF2D000D5BC8B /* JYEducationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYEducationController.h; sourceTree = "<group>"; };
+		5BA05DB71D6BF2D000D5BC8B /* JYEducationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYEducationController.m; sourceTree = "<group>"; };
+		5BA05DB91D6BF2D000D5BC8B /* Education.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Education.plist; sourceTree = "<group>"; };
+		5BA05DBA1D6BF2D000D5BC8B /* JYEducation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYEducation.h; sourceTree = "<group>"; };
+		5BA05DBB1D6BF2D000D5BC8B /* JYEducation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYEducation.m; sourceTree = "<group>"; };
+		5BA05DBD1D6BF2D000D5BC8B /* JYEducationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYEducationCell.h; sourceTree = "<group>"; };
+		5BA05DBE1D6BF2D000D5BC8B /* JYEducationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYEducationCell.m; sourceTree = "<group>"; };
+		5BA05DBF1D6BF2D000D5BC8B /* JYEducationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JYEducationCell.xib; sourceTree = "<group>"; };
 		5BAC82FE1D5B14B30038A454 /* JYTitleScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYTitleScroller.h; sourceTree = "<group>"; };
 		5BAC82FF1D5B14B30038A454 /* JYTitleScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYTitleScroller.m; sourceTree = "<group>"; };
 		5BAC83031D5B14FD0038A454 /* JYMineHeadView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMineHeadView.h; sourceTree = "<group>"; };
@@ -747,6 +754,45 @@
 			path = SMSDK/YZHeaderScaleImage;
 			sourceTree = "<group>";
 		};
+		5BA05DB41D6BF2D000D5BC8B /* Education */ = {
+			isa = PBXGroup;
+			children = (
+				5BA05DB51D6BF2D000D5BC8B /* Controller */,
+				5BA05DB81D6BF2D000D5BC8B /* Model */,
+				5BA05DBC1D6BF2D000D5BC8B /* View */,
+			);
+			path = Education;
+			sourceTree = "<group>";
+		};
+		5BA05DB51D6BF2D000D5BC8B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5BA05DB61D6BF2D000D5BC8B /* JYEducationController.h */,
+				5BA05DB71D6BF2D000D5BC8B /* JYEducationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5BA05DB81D6BF2D000D5BC8B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5BA05DB91D6BF2D000D5BC8B /* Education.plist */,
+				5BA05DBA1D6BF2D000D5BC8B /* JYEducation.h */,
+				5BA05DBB1D6BF2D000D5BC8B /* JYEducation.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5BA05DBC1D6BF2D000D5BC8B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5BA05DBD1D6BF2D000D5BC8B /* JYEducationCell.h */,
+				5BA05DBE1D6BF2D000D5BC8B /* JYEducationCell.m */,
+				5BA05DBF1D6BF2D000D5BC8B /* JYEducationCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		5BAC82F91D5B14980038A454 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -777,10 +823,6 @@
 				5BAC83041D5B14FD0038A454 /* JYMineHeadView.m */,
 				5BAC83061D5B15180038A454 /* JYMineCell.h */,
 				5BAC83071D5B15180038A454 /* JYMineCell.m */,
-				5B9ABC611D5C154D00970571 /* JYShowErWeiCode.h */,
-				5B9ABC621D5C154E00970571 /* JYShowErWeiCode.m */,
-				5B9ABC641D5C264900970571 /* JYViewController.h */,
-				5B9ABC651D5C264900970571 /* JYViewController.m */,
 				5BD5DB0E1D6AED8E00A2988E /* JYShowErWeiCodeView.h */,
 				5BD5DB0F1D6AED8E00A2988E /* JYShowErWeiCodeView.m */,
 			);
@@ -845,6 +887,7 @@
 		846A76131D5238560017A4AC /* Mine   我的 */ = {
 			isa = PBXGroup;
 			children = (
+				5BA05DB41D6BF2D000D5BC8B /* Education */,
 				5BAC83011D5B14F10038A454 /* Model */,
 				5BAC83021D5B14F10038A454 /* View */,
 				846A76141D5238560017A4AC /* Controller */,
@@ -1032,8 +1075,10 @@
 				5B8F693B1D4B2EFD008C309B /* LaunchScreen.storyboard in Resources */,
 				5B8856DB1D4C4E62007C3BAF /* city.plist in Resources */,
 				5B8F69381D4B2EFD008C309B /* Assets.xcassets in Resources */,
+				5BA05DC11D6BF2D000D5BC8B /* Education.plist in Resources */,
 				5B8856CD1D4C476D007C3BAF /* citydata.plist in Resources */,
 				5B93CE0D1D59BCC700BF6041 /* JARoundCell.xib in Resources */,
+				5BA05DC41D6BF2D000D5BC8B /* JYEducationCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1152,7 +1197,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B991C3F1D582B22000B58C9 /* JYSignOnController.m in Sources */,
-				5B9ABC661D5C264900970571 /* JYViewController.m in Sources */,
 				5B93CE0C1D59BCC700BF6041 /* JARoundCell.m in Sources */,
 				5B8350221D52EC540009634C /* JYProvinceList.m in Sources */,
 				5B83501D1D52EC540009634C /* JYCityChoiceController.m in Sources */,
@@ -1169,8 +1213,10 @@
 				5BAC83001D5B14B30038A454 /* JYTitleScroller.m in Sources */,
 				5B8856D01D4C4803007C3BAF /* JYLocation.m in Sources */,
 				5B8F697E1D4B4DCF008C309B /* UIImage+CKExtension.m in Sources */,
+				5BA05DC21D6BF2D000D5BC8B /* JYEducation.m in Sources */,
 				5B8481AF1D548E4E0069199A /* JYBackgroundView.m in Sources */,
 				5BAC83081D5B15180038A454 /* JYMineCell.m in Sources */,
+				5BA05DC01D6BF2D000D5BC8B /* JYEducationController.m in Sources */,
 				5B991C371D5814F7000B58C9 /* JYContentView.m in Sources */,
 				5B83503E1D53163B0009634C /* JYNavigationController.m in Sources */,
 				5B8350231D52EC540009634C /* JYCityShowCell.m in Sources */,
@@ -1179,6 +1225,7 @@
 				5B8F69301D4B2EFD008C309B /* AppDelegate.m in Sources */,
 				5B8350311D52ECA00009634C /* JYHomeController.m in Sources */,
 				5B93CE0F1D59BCC700BF6041 /* LXRoundView.m in Sources */,
+				5BA05DC31D6BF2D000D5BC8B /* JYEducationCell.m in Sources */,
 				5BD5DB101D6AED8E00A2988E /* JYShowErWeiCodeView.m in Sources */,
 				846A761E1D5238F40017A4AC /* JYLifeController.m in Sources */,
 				5B8350441D53281F0009634C /* JYScanBgView.m in Sources */,
@@ -1196,7 +1243,6 @@
 				5B8350201D52EC540009634C /* JYCityData.m in Sources */,
 				846A760E1D5237990017A4AC /* JYTabBarController.m in Sources */,
 				5B8350241D52EC540009634C /* JYHotCityCell.m in Sources */,
-				5B9ABC631D5C154E00970571 /* JYShowErWeiCode.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

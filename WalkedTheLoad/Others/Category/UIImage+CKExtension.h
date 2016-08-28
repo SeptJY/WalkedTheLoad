@@ -41,4 +41,6 @@
 
 + (UIImage *)clipYuanXingImg:(UIImage *)image;
 
++ (UIImage *)logoErWeiCode:(NSString *)source logoImage:(NSString *)logoName;
+
 @end

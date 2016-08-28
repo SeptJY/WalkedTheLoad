@@ -10,8 +10,8 @@
 #import "UIScrollView+HeaderScaleImage.h"
 #import "JYMineHeadView.h"
 #import "JYMineCell.h"
-#import "JYShowErWeiCode.h"
 #import "JYShowErWeiCodeView.h"
+#import "JYEducationController.h"
 
 @interface JYMineController ()
 {
@@ -124,6 +124,11 @@
 //            [[JYShowErWeiCode sharedInstance] showWithPresentView:self.cardView animated:YES];
 //            self.showView.hidden = NO;
             [self.showView startAnimation];
+        }
+            break;
+        case 2:
+        {
+            JYEducationController *education = [[JYEducationController alloc] init];
         }
             break;
             
